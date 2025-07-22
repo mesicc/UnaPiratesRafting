@@ -1,0 +1,98 @@
+.image-section {
+  background-image: linear-gradient(180deg, transparent, #0000008f),
+    url(/materijali/rafting.JPG);
+} 
+.solid {
+  background-color: greenyellow;
+  width: 5rem;
+}
+
+.image-section__textblock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin: 0;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.rafting-section {
+  background-image: none;
+  color: black;
+  padding: 3rem;
+  display: block;
+  width: 50%;
+}
+
+.rafting-section__images img {
+  height: 35rem;
+}
+
+.rafting-section h2 {
+  font-family: "EDO";
+  text-align: center;
+}
+
+h1 {
+  text-align: center;
+}
+
+/* DESKTOP VERSION */
+@media (min-width: 768px) {
+  .image-section__textblock {
+    margin-left: 3rem;
+    display: inline-block;
+    width: auto;
+  }
+
+  .rafting-section h2 {
+    text-align: left;
+  }
+
+  h1 {
+    text-align: left;
+  }
+
+  .image-section {
+    background-image: linear-gradient(180deg, transparent, #0000008f),
+      url(/materijali/buk.webp);
+  }
+
+  .rafting-section {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 0;
+    margin-top: 2rem;
+  }
+
+  .rafting-section div {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+    justify-content: center;
+    margin: 0;
+  }
+
+  .rafting-section__route1,
+  .rafting-section__route2 {
+    align-items: center;
+    padding: 2rem;
+    border-radius: 15px;
+    box-shadow: 5px 5px 25px rgb(200, 200, 200);
+  }
+
+  .rafting-section__route1 p,
+  .rafting-section__route2 p {
+    width: 50ch;
+  }
+
+  .route2__paragraphSection {
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+  }
+}

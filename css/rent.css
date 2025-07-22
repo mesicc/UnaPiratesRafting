@@ -1,0 +1,58 @@
+.image-section {
+  background-image: linear-gradient(180deg, transparent, #0000008f),
+    url(/materijali/background.webp);
+  background-size: cover;
+}
+.solid {
+  background-color: rgb(255, 49, 49);
+}
+.ignore-padding {
+  box-sizing: border-box;
+}
+.green-button {
+  margin: 3.5rem 0 3.5rem 0;
+}
+.rafting-section {
+  padding: 0;
+}
+.text-wrapper {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+}
+#carousel__slide1 {
+  background-image: url(/materijali/rent1.webp);
+}
+#carousel__slide2 {
+  background-image: url(/materijali/rent2.webp);
+}
+#carousel__slide3 {
+  background-image: url(/materijali/rent3.webp);
+}
+#carousel__slide4 {
+  background-image: url(/materijali/rent4.webp);
+}
+#carousel__slide5 {
+  background-image: url(/materijali/rent5.webp);
+}
+
+.gallery {
+  display: none;
+}
+
+@media (min-width: 780px) {
+  .carousel {
+    display: none;
+  }
+  .gallery {
+    display: flex;
+  }
+  .image-section {
+    background-image: linear-gradient(180deg, transparent, #0000008f),
+      url(/materijali/rentd.webp);
+    background-size: cover;
+  }
+  .image-section__location {
+    display: none;
+  }
+}

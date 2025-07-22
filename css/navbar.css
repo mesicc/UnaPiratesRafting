@@ -1,0 +1,96 @@
+/* SITE HEADER & NAVBAR */
+.site-header {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+    top: 0;
+    z-index: 1000;
+  }
+  
+  .navbar-container {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 1.5rem;
+  }
+  
+  .logo-section {
+    display: flex;
+    align-items: center;
+    width: 25%;
+    justify-content: center;
+  }
+  
+  .navbar-logo-text {
+    font-family: "EDO", sans-serif;
+    font-size: 2rem;
+    color: black;
+    margin: 0;
+  }
+  
+  .navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar-links li a {
+    color: #4f785e;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .navbar-links li a:hover {
+    color: #3d5f4a;
+  }
+
+  .site-header {
+    background-color: white;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 0.5rem 1rem;
+
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease; /* smooth transition */
+  }
+  
+  .site-header.scrolled {
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+    background-color: white; /* You can slightly darken if you want */
+  }
+  
+  
+  
+  /* Mobile version: hide desktop navbar */
+  @media (max-width: 768px) {
+    .site-header{
+      background-color:rgba(255, 0, 0, 0);
+      position: absolute;
+      right: 1rem;
+      box-shadow: none;
+      top: 1rem;
+      z-index: 2;
+    }
+    .logo-section{
+      position: absolute;
+      right: 2rem;
+      width: auto;
+    }
+    .navbar-logo-text{
+      color: white;
+    }
+    .navbar-links{
+      display: none;
+    }
+  }
+  
