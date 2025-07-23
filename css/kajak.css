@@ -128,3 +128,16 @@ nav,div{
     padding: 1.5rem;
   }
 }
+
+.old-price {
+  color: #888;
+  text-decoration: line-through;
+  font-weight: bold;
+  margin-right: 0.5rem;
+}
+
+.new-price {
+  color: red;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
