@@ -1,6 +1,6 @@
 <?php
 $valid_credentials = [
-    'admin' => '$2y$10$ScoN.Bgh951GumoZwgXmW.AqiOu7zTY4mV8FW3gVe2JUHCoMMy.0S', // Generated with password_hash(), Sifra je 123
+    'unapirat' => '$2y$10$Psx5cfl93p4VLpAEsJv2tO7U0me/L8evQuK.sSY8SfF8vHzpWfaN.', // Generated with phpsandbox i password_hash(), Sifra je tatahadi
 ];
 
 $realm = 'Secure Area';
@@ -34,9 +34,9 @@ use PHPMailer\PHPMailer\SMTP;
 // Email configuration - Update these with your SMTP settings
 $smtp_host = 'smtp.gmail.com'; // or your SMTP server
 $smtp_port = 587;
-$smtp_username = 'test@gmail.com';
+$smtp_username = 'unapirates@gmail.com';
 $smtp_password = 'password-goes-here';
-$from_email = 'test@gmail.com';
+$from_email = 'unapirates@gmail.com';
 $from_name = 'Una Pirates';
 
 // Initialize variables
