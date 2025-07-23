@@ -11,11 +11,11 @@ use PHPMailer\PHPMailer\SMTP;
 // Email configuration - Update these with your SMTP settings
 $smtp_host = 'smtp.gmail.com'; // or your SMTP server
 $smtp_port = 587;
-$smtp_username = 'test@gmail.com';
+$smtp_username = 'unapirates@gmail.com';
 $smtp_password = 'password-goes-here';
-$from_email = 'test@gmail.com';
+$from_email = 'unapirates@gmail.com';
 $from_name = 'Una Pirates';
-$owner_mail = "owner@gmail.com";
+$owner_mail = "unapirates@gmail.com";
 $owner_name = "Owner";
 
 // Initialize variables
