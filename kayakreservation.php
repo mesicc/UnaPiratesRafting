@@ -349,7 +349,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h3>🛶 Dostupne Kajak Avanture</h3>
                     <div class="tour-options">
                         <div class="tour-option">
-                            <h4>🏙️ Bihac City Tour</h4>
+                            <h4>🏙️ Bihac City Kayak Safari</h4>
                             <div class="tour-price">35€ po osobi</div>
                             <ul>
                                 <li>Mirna vožnja kajaka po rijeci Uni</li>
@@ -359,7 +359,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </ul>
                         </div>
                         <div class="tour-option">
-                            <h4>🏔️ Kostela</h4>
+                            <h4>🏔️ Kostela Kayak Safari</h4>
                             <div class="tour-price">
                                 <span class="original-price">40€</span>
                                 <span class="sale-price">35€</span>
@@ -397,10 +397,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <label for="selected_tour">Izaberite turu <span class="required">*</span></label>
                         <select id="selected_tour" name="selected_tour" required>
                             <option value="bihac_city_tour" <?php echo ($selected_tour ?? 'bihac_city_tour') === 'bihac_city_tour' ? 'selected' : ''; ?>>
-                                🏙️ Bihac City Tour - 35€ po osobi
+                                🏙️ Bihac City Kayak Safari - 35€ po osobi
                             </option>
                             <option value="kostela" <?php echo ($selected_tour ?? '') === 'kostela' ? 'selected' : ''; ?>>
-                                🏔️ Kostela - 35€ po osobi (sniženo sa 40€) ⭐
+                                🏔️ Kostela Kayak Safari - 35€ po osobi (sniženo sa 40€) ⭐
                             </option>
                         </select>
                         <div class="route-info" id="tour-description">
