@@ -8,6 +8,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
+// ReCaptcha
+
+$recaptcha_site_key = 'SITE-KEY';
+$recaptcha_secret_key = 'SECRET-KEY';
+
 // Email configuration
 $smtp_host = 'smtp.gmail.com';
 $smtp_port = 587;
@@ -53,6 +58,31 @@ if (isset($_GET['success']) && $_GET['success'] == '1' && isset($_GET['id'])) {
 // Function to validate email
 function validateEmail($email) {
     return filter_var($email, FILTER_VALIDATE_EMAIL) !== false;
+}
+
+function verifyRecaptchaV2($response) {
+    global $recaptcha_secret_key;
+
+    $url = 'https://www.google.com/recaptcha/api/siteverify';
+    $data = [
+        'secret' => $recaptcha_secret_key,
+        'response' => $response,
+        'remoteip' => $_SERVER['REMOTE_ADDR']
+    ];
+
+    $options = [
+        'http' => [
+            'header' => "Content-type: application/x-www-form-urlencoded\r\n",
+            'method' => 'POST',
+            'content' => http_build_query($data)
+        ]
+    ];
+    
+    $context = stream_context_create($options);
+    $result = file_get_contents($url, false, $context);
+    $responseKeys = json_decode($result, true);
+
+    return $responseKeys["success"];
 }
 
 // Function to validate phone number
@@ -204,6 +234,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $reservation_date = $_POST['reservation_date'];
     $amount_of_people = intval($_POST['amount_of_people']);
     $activity_type = 'Kajak';
+    $recaptcha_response = $_POST['g-recaptcha-response'] ?? '';
     
     // Validacija izabrane ture
     if (!array_key_exists($selected_tour, $kajak_tours)) {
@@ -214,7 +245,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $rafting_route = $tour_info['name'];
     
     $errors = [];
-    
+
+    if (!verifyRecaptchaV2($recaptcha_response)) {
+        $errors[] = "Please complete the reCAPTCHA verification.";
+    }
+
     if (empty($email)) {
         $errors[] = "Email je obavezan.";
     } elseif (!validateEmail($email)) {
@@ -306,6 +341,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <link rel="icon" href="materijali/logo.webp" type="image/x-icon" />
     <link rel="stylesheet" href="./css/kayakreservation.css"/>
     <script src="https://kit.fontawesome.com/53f832df41.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 </head>
 <body>
     <a href="index.html" class="back-to-home">
@@ -423,7 +459,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             Ukupna cijena: <span id="price-amount">35€</span>
                         </div>
                     </div>
-
+                    <div class="g-recaptcha" data-sitekey="<?php echo $recaptcha_site_key ?>"></div>
                     <button type="submit" class="submit-btn" id="submitBtn">
                         <i class="fas fa-water"></i> Rezerviši kajak - Trenutna potvrda!
                     </button>
