@@ -385,7 +385,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <h3>🛶 Dostupne Kajak Avanture</h3>
                     <div class="tour-options">
                         <div class="tour-option">
-                            <h4>🏙️ Bihac City Kayak Safari</h4>
+                            <h4>🏙️ City Kayak Safari</h4>
                             <div class="tour-price">35€ po osobi</div>
                             <ul>
                                 <li>Mirna vožnja kajaka po rijeci Uni</li>
@@ -403,7 +403,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             </div>
                             <ul>
                                 <li>Avantura kroz kanjon Kostela</li>
-                                <li>Prijevoz od agencije do željene destinacije</li>
+                                <li>Na start u Kostela dolazite vlastitim autom</li>
                                 <li>Osnovna kayak oprema</li>
                                 <li>Licencirani vodič/skiper na rijeci</li>
                             </ul>
