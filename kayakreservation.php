@@ -160,7 +160,7 @@ function sendConfirmationEmail($reservation, $tour_info) {
                             <span class='value'>{$tour_info['name']}</span>
                         </div>
                         <div class='price-highlight'>
-                            <strong>Cena po osobi: $price_display</strong>
+                            <strong>Cijena po osobi: $price_display</strong>
                         </div>
                         <div class='detail-row'>
                             <span class='label'>Ime:</span>
@@ -183,7 +183,7 @@ function sendConfirmationEmail($reservation, $tour_info) {
                             <span class='value'>{$reservation['amount_of_people']}</span>
                         </div>
                         <div class='detail-row'>
-                            <span class='label'>Ukupna cena:</span>
+                            <span class='label'>Ukupna cijena:</span>
                             <span class='value' style='font-size: 1.2em; font-weight: bold; color: #7b1fa2;'>" . ($reservation['amount_of_people'] * $tour_info['price']) . "€</span>
                         </div>
                         <div class='detail-row'>
@@ -191,14 +191,6 @@ function sendConfirmationEmail($reservation, $tour_info) {
                             <span class='value' style='color: #7b1fa2; font-weight: bold;'>✅ POTVRĐENO</span>
                         </div>
                     </div>
-                    <h3>📝 Šta ponijeti</h3>
-                    <ul>
-                        <li><strong>Dolazak:</strong> Dođite 30 minuta prije zakazanog vremena</li>
-                        <li><strong>Odjeća:</strong> Brzo-sušeća odjeća i sigurna obuća</li>
-                        <li><strong>Zaštita:</strong> Krema za sunce, kapa i naočare</li>
-                        <li><strong>Voda:</strong> Flaša za vodu (mi obezbijedimo užinu)</li>
-                        <li><strong>Lične stvari:</strong> Vodootporna torba za vrijednosti</li>
-                    </ul>
                     <h3>📞 Kontakt</h3>
                     <p>Za izmjene ili otkazivanje kontaktirajte nas najmanje 24h unaprijed:</p>
                     <ul>
