@@ -37,7 +37,7 @@ $rafting_routes = [
     ],
     'Štrbački Buk' => [
         'name' => 'Štrbački Buk', 
-        'price' => 50,
+        'price' => 55,
         'original_price' => null,
         'description' => 'Avanturistička ruta sa više uzbuđenja i adrenalina'
     ]
@@ -188,7 +188,7 @@ function sendConfirmationEmail($reservation, $route_info) {
                             <span class='value'>{$reservation['amount_of_people']}</span>
                         </div>
                         <div class='detail-row'>
-                            <span class='label'>Ukupna cena:</span>
+                            <span class='label'>Ukupna cijena:</span>
                             <span class='value' style='font-size: 1.2em; font-weight: bold; color: #4f785e;'>" . ($reservation['amount_of_people'] * $route_info['price']) . "€</span>
                         </div>
                         <div class='detail-row'>
@@ -196,15 +196,6 @@ function sendConfirmationEmail($reservation, $route_info) {
                             <span class='value' style='color: #4f785e; font-weight: bold;'>✅ POTVRĐENO</span>
                         </div>
                     </div>
-                    
-                    <h3>📝 Šta ponijeti</h3>
-                    <ul>
-                        <li><strong>Dolazak:</strong> Dođite 30 minuta prije zakazanog vremena</li>
-                        <li><strong>Odjeća:</strong> Brzo-sušeća odjeća i sigurna obuća</li>
-                        <li><strong>Zaštita:</strong> Krema za sunce, kapa i naočare</li>
-                        <li><strong>Voda:</strong> Flaša za vodu (mi obezbijedimo užinu)</li>
-                        <li><strong>Lične stvari:</strong> Vodootporna torba za vrijednosti</li>
-                    </ul>
                     
                     <h3>📞 Kontakt</h3>
                     <p>Za izmjene ili otkazivanje kontaktirajte nas najmanje 24h unaprijed:</p>
@@ -401,7 +392,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <div class="route-options">
                         <div class="route-option">
                             <h4>⚡ Štrbački Buk <span class="badge-popular">POPULARNO</span></h4>
-                            <div class="route-price">50€ po osobi + 8€ Ulaz NP Una</div>
+                            <div class="route-price">47€ po osobi + 8€ Ulaz NP Una</div>
                             <ul>
                                 <li>Osnovna rafting oprema</li>
                                 <li>Spektakularni vodopadi</li>
@@ -446,7 +437,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <select id="rafting_route" name="rafting_route" required>
                             <option value="">Izaberite rutu...</option>
                             <option value="Štrbački Buk" <?php echo (isset($rafting_route) && $rafting_route === 'Štrbački Buk') ? 'selected' : ''; ?>>
-                                ⚡ Štrbački Buk - 50€ po osobi + 8€ NP Una 
+                                ⚡ Štrbački Buk - 47€ po osobi + 8€ NP Una 
                             </option>
                             <option value="Kostela" <?php echo (isset($rafting_route) && $rafting_route === 'Kostela') ? 'selected' : ''; ?>>
                                 🌊 Kostela - 35€ po osobi
@@ -495,7 +486,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         const routePrices = {
             'Kostela': 35,
-            'Štrbački Buk': 58
+            'Štrbački Buk': 55
         };
 
         function updateRouteInfo() {
