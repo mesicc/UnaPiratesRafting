@@ -165,7 +165,7 @@ function sendConfirmationEmail($reservation, $route_info) {
                             <span class='value'>{$route_info['name']}</span>
                         </div>
                         <div class='price-highlight'>
-                            <strong>Cena po osobi: $price_display</strong>
+                            <strong>Cijena po osobi: $price_display</strong>
                         </div>
                         <div class='detail-row'>
                             <span class='label'>Ime:</span>
