@@ -10,18 +10,18 @@ use PHPMailer\PHPMailer\SMTP;
 
 // ReCaptcha
 
-$recaptcha_site_key = 'SITE-KEY';
-$recaptcha_secret_key = 'SECRET-KEY';
+$recaptcha_site_key = '6LfkppwrAAAAANpV5qVyRifLNMsFlTfT0ogx7QUM';
+$recaptcha_secret_key = '6LfkppwrAAAAAMpvg94xUUSATI7y51sc2WoOQss6';
 
 // Email configuration - Update these with your SMTP settings
 $smtp_host = 'smtp.gmail.com'; // or your SMTP server
 $smtp_port = 587;
 $smtp_username = 'unapirates@gmail.com';
-$smtp_password = 'password-goes-here';
+$smtp_password = 'abks dhpj qslr fttb';
 $from_email = 'unapirates@gmail.com';
 $from_name = 'Una Pirates';
 $owner_mail = "unapirates@gmail.com";
-$owner_name = "Owner";
+$owner_name = "Una Pirates";
 
 // Initialize variables
 $error_message = '';
@@ -201,7 +201,7 @@ function sendConfirmationEmail($reservation, $route_info) {
                     <p>Za izmjene ili otkazivanje kontaktirajte nas najmanje 24h unaprijed:</p>
                     <ul>
                         <li>📧 Email: <strong>{$from_email}</strong></li>
-                        <li>📱 Telefon: <strong>(555) 123-RAFT</strong></li>
+                        <li>📱 Telefon: <strong>+387 61 782 339 - RAFTING</strong></li>
                         <li>🆔 Referenca: <strong>#{$reservation['reservation_id']}</strong></li>
                     </ul>
                     

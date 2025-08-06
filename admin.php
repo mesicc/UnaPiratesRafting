@@ -35,7 +35,7 @@ use PHPMailer\PHPMailer\SMTP;
 $smtp_host = 'smtp.gmail.com'; // or your SMTP server
 $smtp_port = 587;
 $smtp_username = 'unapirates@gmail.com';
-$smtp_password = 'password-goes-here';
+$smtp_password = 'abks dhpj qslr fttb';
 $from_email = 'unapirates@gmail.com';
 $from_name = 'Una Pirates';
 
@@ -207,9 +207,8 @@ function sendCancellationEmail($reservation) {
                     <p>If you have any questions or concerns, please don't hesitate to contact us:</p>
                     <ul>
                         <li>📧 Email: <strong>{$from_email}</strong></li>
-                        <li>📱 Phone: <strong>(555) 123-RAFT</strong></li>
+                        <li>📱 Phone: <strong>+387 61 782 339 - Una Pirates</strong></li>
                         <li>🆔 Reference: <strong>#{$reservation['reservation_id']}</strong></li>
-                        <li>⏰ Business Hours: Monday-Sunday, 8 AM - 6 PM</li>
                     </ul>
                     <div class='footer'>
                         <p>Sincerely,<br><strong>The Adventure Team</strong></p>
