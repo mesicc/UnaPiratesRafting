@@ -1,11 +1,174 @@
+<!-- index.html -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rafting na Uni – Una Pirates</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responzivnost.css" />
 </head>
 <body>
-    
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <img src="assets/images/logo.webp" alt="Una Pirates Logo" />
+                <div class="nav-logo-text">
+                    <span class="nav-logo-main">Rafting na Uni</span>
+                    <span class="nav-logo-sub">BY UNA PIRATES</span>
+                </div>
+            </a>
+
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#pocetna" class="nav-link active">POČETNA</a></li>
+                <li><a href="#o-nama" class="nav-link">O NAMA</a></li>
+                <li><a href="#rute" class="nav-link">RUTE</a></li>
+                <li><a href="#team-building" class="nav-link">TEAM BUILDING</a></li>
+                <li><a href="#smjestaj" class="nav-link">SMJEŠTAJ</a></li>
+            </ul>
+
+            <div class="nav-right">
+                <div class="lang-switcher" id="langSwitcher">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="currentLang">BS</span>
+                        <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <div class="lang-dropdown" id="langDropdown">
+                        <div class="lang-option active" data-lang="BS">
+                            <img src="https://flagcdn.com/w20/ba.png" alt="BA" /> Bosanski
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="lang-option" data-lang="EN">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="EN" /> English
+                        </div>
+                        <div class="lang-option" data-lang="DE">
+                            <img src="https://flagcdn.com/w20/de.png" alt="DE" /> Deutsch
+                        </div>
+                        <div class="lang-option" data-lang="AR">
+                            <img src="https://flagcdn.com/w20/sa.png" alt="AR" /> العربية
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#rezervacija" class="btn-rezervisi">Rezerviši</a>
+
+                <button class="hamburger" id="hamburger" aria-label="Otvori meni">
+                    <span></span><span></span><span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ========== MOBILE MENU ========== -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="mobile-menu-header">
+            <a href="#" class="nav-logo">
+                <img src="assets/images/logo.webp" alt="Una Pirates Logo" />
+                <div class="nav-logo-text">
+                    <span class="nav-logo-main">Rafting na Uni</span>
+                    <span class="nav-logo-sub">BY UNA PIRATES</span>
+                </div>
+            </a>
+            <div class="mobile-menu-right">
+                <div class="lang-switcher" id="langSwitcherMobile">
+                    <button class="lang-btn lang-btn-dark" id="langBtnMobile">
+                        <i class="fa-solid fa-globe"></i>
+                        <span id="currentLangMobile">BS</span>
+                        <i class="fa-solid fa-chevron-down" id="langArrowMobile"></i>
+                    </button>
+                    <div class="lang-dropdown lang-dropdown-mobile" id="langDropdownMobile">
+                        <div class="lang-option active" data-lang="BS">
+                            <img src="https://flagcdn.com/w20/ba.png" alt="BA" /> Bosanski
+                            <i class="fa-solid fa-check"></i>
+                        </div>
+                        <div class="lang-option" data-lang="EN">
+                            <img src="https://flagcdn.com/w20/gb.png" alt="EN" /> English
+                        </div>
+                        <div class="lang-option" data-lang="DE">
+                            <img src="https://flagcdn.com/w20/de.png" alt="DE" /> Deutsch
+                        </div>
+                        <div class="lang-option" data-lang="AR">
+                            <img src="https://flagcdn.com/w20/sa.png" alt="AR" /> العربية
+                        </div>
+                    </div>
+                </div>
+                <button class="close-menu" id="closeMenu" aria-label="Zatvori meni">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+            </div>
+        </div>
+
+        <ul class="mobile-nav-links">
+            <li><a href="#pocetna" class="mobile-nav-link">Početna</a></li>
+            <li><a href="#o-nama" class="mobile-nav-link">O nama</a></li>
+            <li><a href="#rute" class="mobile-nav-link">Rute</a></li>
+            <li><a href="#team-building" class="mobile-nav-link">Team Building</a></li>
+            <li><a href="#smjestaj" class="mobile-nav-link">Smještaj</a></li>
+        </ul>
+
+        <a href="#rezervacija" class="btn-rezervisi btn-rezervisi-full">Rezerviši</a>
+    </div>
+
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ========== HERO ========== -->
+    <section class="hero" id="pocetna">
+        <div class="hero-bg" style="background-image: url('assets/images/hero-bg.jpg');"></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <p class="hero-location">
+                NP UNA – ŠTRBAČKI BUK &nbsp;·&nbsp; BOSNIA &amp; HERZEGOVINA
+            </p>
+            <h1 class="hero-title">
+                Rafting na Uni<br />
+                može <span class="hero-title-accent">početi!</span>
+            </h1>
+            <p class="hero-desc">
+                Otkrijte šta vas čeka u novim avanturama u 2026 godini! Doživite
+                najbolji rafting na Uni, ritam divljine i trenutke za pamćenje.
+                Vaša avantura počinje i završava sa Una Piratima.
+            </p>
+            <div class="hero-btns">
+                <a href="#rezervacija" class="btn-primary">Rezerviraj Avanturu</a>
+                <a href="#rute" class="btn-outline">Naša Ponuda</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== POST-HEADER / STATS ========== -->
+    <section class="stats-bar">
+        <div class="stats-container">
+            <div class="stat-item">
+                <i class="fa-regular fa-star stat-icon"></i>
+                <div class="stat-text">
+                    <span class="stat-number">5/5</span>
+                    <span class="stat-label">GOOGLE RECENZIJE</span>
+                </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <i class="fa-regular fa-clock stat-icon"></i>
+                <div class="stat-text">
+                    <span class="stat-number">20+</span>
+                    <span class="stat-label">GODINA ISKUSTVA NA UNI</span>
+                </div>
+            </div>
+            <div class="stat-divider"></div>
+            <div class="stat-item">
+                <i class="fa-regular fa-users stat-icon"></i>
+                <div class="stat-text">
+                    <span class="stat-number">5,000+</span>
+                    <span class="stat-label">ZADOVOLJNIH GOSTIJU</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="assets/js/main.js"></script>
 </body>
 </html>
