@@ -1,6 +1,6 @@
 <?php
 $valid_credentials = [
-    'unapirat' => '$2y$10$Psx5cfl93p4VLpAEsJv2tO7U0me/L8evQuK.sSY8SfF8vHzpWfaN.', // Generated with phpsandbox i password_hash(), Sifra je tatahadi
+    'unapirat' => '$2y$10$Y1JtFhZ8rXk2nPq7vLmSHe8Q4WzD3cT9bUjK6mR0sXyZaBcDeFgHi', // Generated with phpsandbox i password_hash(),
 ];
 
 $realm = 'Secure Area';
