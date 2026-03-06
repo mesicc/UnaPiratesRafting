@@ -671,3 +671,464 @@ ul { list-style: none; }
     color: var(--orange);
     transform: translateY(-1px);
 }
+
+
+/* ============================================================
+   Istraži Rijeku Una
+============================================================ */
+/* ============================================================
+   Istraži Rijeku Una
+============================================================ */
+/* ============================================================
+   Istraži Rijeku Una
+============================================================ */
+
+
+/* ============================================================
+   QUIZ – Koji si tip raftera?
+============================================================ */
+.quiz-section {
+    background-color: #132E22;
+    padding: 80px 24px;
+}
+
+.quiz-container {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+/* Header */
+.quiz-header {
+    text-align: center;
+    margin-bottom: 48px;
+}
+
+.quiz-title {
+    font-size: clamp(28px, 4vw, 46px);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 12px;
+    line-height: 1.1;
+}
+
+.quiz-title-accent {
+    color: var(--orange);
+}
+
+.quiz-subtitle {
+    font-size: clamp(14px, 1.8vw, 17px);
+    color: rgba(255,255,255,0.65);
+    font-weight: 400;
+}
+
+/* Card */
+.quiz-card {
+    background: #fff;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+}
+
+/* Card header (gradient) */
+.quiz-card-header {
+    background: linear-gradient(135deg, #3EB489 0%, #4AADE8 100%);
+    padding: 22px 28px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.quiz-step-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.85);
+}
+
+.quiz-wave-icon {
+    font-size: 22px;
+    color: rgba(255,255,255,0.7);
+    letter-spacing: -2px;
+}
+
+/* Progress bar */
+.quiz-progress-bar {
+    background: linear-gradient(135deg, #3EB489 0%, #4AADE8 100%);
+    padding: 14px 28px 20px;
+}
+
+.quiz-progress-fill {
+    height: 5px;
+    background: rgba(255,255,255,0.9);
+    border-radius: 10px;
+    transition: width 0.4s ease;
+}
+
+/* Card body */
+.quiz-card-body {
+    padding: 28px 28px 32px;
+    background: #fff;
+}
+
+.quiz-pitanje {
+    font-size: clamp(18px, 2.5vw, 24px);
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 24px;
+}
+
+/* Opcije */
+.quiz-opcije {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.quiz-opcija {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px 20px;
+    background: #F7F5F0;
+    border: 2px solid transparent;
+    border-radius: 14px;
+    font-family: var(--font);
+    font-size: clamp(14px, 1.6vw, 16px);
+    font-weight: 500;
+    color: #1a1a1a;
+    cursor: pointer;
+    text-align: left;
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.quiz-opcija:hover {
+    border-color: var(--orange);
+    background: #fff;
+    transform: translateX(4px);
+}
+
+.quiz-opcija.selected {
+    border-color: var(--orange);
+    background: #FFF5EE;
+}
+
+.quiz-emoji {
+    font-size: 20px;
+    flex-shrink: 0;
+    width: 28px;
+    text-align: center;
+}
+
+/* Rezultat */
+.quiz-rezultat-header {
+    background: linear-gradient(135deg, #3EB489 0%, #4AADE8 100%);
+    padding: 36px 28px 28px;
+    text-align: center;
+}
+
+.quiz-rezultat-emoji-wrap {
+    width: 64px;
+    height: 64px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    margin: 0 auto 16px;
+}
+
+.quiz-rezultat-tip {
+    font-size: clamp(22px, 3vw, 30px);
+    font-weight: 900;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.quiz-rezultat-opis {
+    font-size: clamp(13px, 1.5vw, 15px);
+    color: rgba(255,255,255,0.85);
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+.quiz-rezultat-body {
+    padding: 28px;
+    background: #fff;
+}
+
+.quiz-features-box {
+    background: #F7F5F0;
+    border-radius: 14px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+}
+
+.quiz-features-title {
+    font-size: 14px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 14px;
+}
+
+.quiz-features-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 16px;
+}
+
+.quiz-features-list li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.quiz-features-list li::before {
+    content: '✓';
+    color: var(--orange);
+    font-weight: 800;
+    font-size: 15px;
+    flex-shrink: 0;
+}
+
+.quiz-trajanje {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 13px;
+    color: #888;
+}
+
+.quiz-trajanje::before {
+    content: '⏱';
+    font-size: 13px;
+}
+
+.quiz-social-proof {
+    text-align: center;
+    font-size: 13px;
+    color: #888;
+    font-style: italic;
+    margin-bottom: 24px;
+}
+
+.quiz-social-proof::before {
+    content: '💡 ';
+}
+
+.quiz-rezultat-btns {
+    display: flex;
+    gap: 14px;
+}
+
+.btn-quiz-rezervisi {
+    flex: 1;
+    background: var(--orange);
+    color: #fff;
+    font-family: var(--font);
+    font-size: clamp(13px, 1.5vw, 15px);
+    font-weight: 700;
+    padding: 15px 20px;
+    border-radius: 50px;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: background 0.2s, transform 0.15s;
+    text-align: center;
+}
+
+.btn-quiz-rezervisi:hover {
+    background: var(--orange-dark);
+    transform: translateY(-1px);
+}
+
+.btn-quiz-ponovi {
+    flex: 1;
+    background: transparent;
+    color: #1a1a1a;
+    font-family: var(--font);
+    font-size: clamp(13px, 1.5vw, 15px);
+    font-weight: 700;
+    padding: 14px 20px;
+    border-radius: 50px;
+    border: 2px solid #ddd;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.btn-quiz-ponovi:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+/* Hidden helper */
+.hidden { display: none !important; }
+
+/* ============================================================
+   ŠTA NUDIMO – USLUGE
+============================================================ */
+.usluge {
+    background-color: #EDEAE4;
+    padding: 80px 24px;
+}
+
+.usluge-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Grid – 4 kolone na desktopu */
+.usluge-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-bottom: 64px;
+}
+
+/* Kartica */
+.usluga-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+.usluga-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 36px rgba(0,0,0,0.12);
+}
+
+/* Slika */
+.usluga-img-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    overflow: hidden;
+}
+
+.usluga-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.usluga-card:hover .usluga-img {
+    transform: scale(1.05);
+}
+
+/* Body */
+.usluga-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.usluga-naziv {
+    font-size: 17px;
+    font-weight: 900;
+    color: #1a1a1a;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.usluga-opis {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.6;
+    flex: 1;
+    margin-bottom: 18px;
+}
+
+/* Dugme */
+.btn-usluga {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--orange);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 10px 20px;
+    border-radius: 50px;
+    transition: background 0.2s, transform 0.15s;
+    align-self: flex-start;
+}
+
+.btn-usluga:hover {
+    background: var(--orange-dark);
+    transform: translateX(3px);
+}
+
+.btn-arrow {
+    font-size: 15px;
+    transition: transform 0.2s;
+}
+
+.btn-usluga:hover .btn-arrow {
+    transform: translateX(3px);
+}
+
+/* ---- Ostale aktivnosti ---- */
+.ostale-aktivnosti {
+    text-align: center;
+}
+
+.ostale-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: #999;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.aktivnosti-pills {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.aktivnost-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: #fff;
+    border: 1.5px solid #e0dbd3;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    color: #333;
+    cursor: default;
+    transition: border-color 0.2s, color 0.2s;
+}
+
+.aktivnost-pill:hover {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.aktivnost-icon {
+    color: var(--orange);
+    font-size: 14px;
+}

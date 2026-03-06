@@ -135,7 +135,7 @@
             </p>
             <div class="hero-btns">
                 <a href="#rezervacija" class="btn-primary">Rezerviraj Avanturu</a>
-                <a href="#rute" class="btn-outline">Naša Ponuda</a>
+                <a href="#usluge" class="btn-outline">Naša Ponuda</a>
             </div>
         </div>
     </section>
@@ -247,6 +247,238 @@
                     </div>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------Istraži Rijeku Una-------------------------------->
+    <!-------------------------Istraži Rijeku Una-----KARTA---------------------->
+    <!-------------------------Istraži Rijeku Una-------------------------------->
+
+    <!-- ========== QUIZ – Koji si tip raftera? ========== -->
+    <section class="quiz-section" id="quiz" aria-labelledby="quiz-naslov">
+        <div class="quiz-container">
+
+            <header class="quiz-header">
+                <h2 class="quiz-title" id="quiz-naslov">
+                    Koji si tip <span class="quiz-title-accent">raftera</span>?
+                </h2>
+                <p class="quiz-subtitle">Odgovori na 3 pitanja i saznaj koja ruta je idealna za tebe</p>
+            </header>
+
+            <!-- CARD -->
+            <div class="quiz-card" id="quizCard">
+
+                <!-- Pitanja -->
+                <div class="quiz-step" id="step1">
+                    <div class="quiz-card-header">
+                        <span class="quiz-step-label">Pitanje 1 od 3</span>
+                        <span class="quiz-wave-icon">≋</span>
+                    </div>
+                    <div class="quiz-progress-bar">
+                        <div class="quiz-progress-fill" style="width: 33%;"></div>
+                    </div>
+                    <div class="quiz-card-body">
+                        <h3 class="quiz-pitanje">Kakav tip avanture tražiš?</h3>
+                        <ul class="quiz-opcije" role="list">
+                            <li>
+                                <button class="quiz-opcija" data-step="1" data-value="relax" aria-label="Odaberi: mirna vožnja">
+                                    <span class="quiz-emoji">🧘</span>
+                                    Volim mirnu vožnju i uživanje u prirodi
+                                </button>
+                            </li>
+                            <li>
+                                <button class="quiz-opcija" data-step="1" data-value="adrenalin" aria-label="Odaberi: adrenalin i akcija">
+                                    <span class="quiz-emoji">🔥</span>
+                                    Volim adrenalin i akciju
+                                </button>
+                            </li>
+                            <li>
+                                <button class="quiz-opcija" data-step="1" data-value="photo" aria-label="Odaberi: kupanje i fotografije">
+                                    <span class="quiz-emoji">📸</span>
+                                    Najviše mi je bitno da je lijepo za kupanje i fotografije
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="quiz-step hidden" id="step2">
+                    <div class="quiz-card-header">
+                        <span class="quiz-step-label">Pitanje 2 od 3</span>
+                        <span class="quiz-wave-icon">≋</span>
+                    </div>
+                    <div class="quiz-progress-bar">
+                        <div class="quiz-progress-fill" style="width: 66%;"></div>
+                    </div>
+                    <div class="quiz-card-body">
+                        <h3 class="quiz-pitanje">Koliko adrenalina želiš na vodi?</h3>
+                        <ul class="quiz-opcije" role="list">
+                            <li>
+                                <button class="quiz-opcija" data-step="2" data-value="malo" aria-label="Odaberi: malo adrenalina">
+                                    <span class="quiz-emoji">🚣</span>
+                                    Malo – lagana vožnja bez velikih brzaca
+                                </button>
+                            </li>
+                            <li>
+                                <button class="quiz-opcija" data-step="2" data-value="srednje" aria-label="Odaberi: srednje adrenalina">
+                                    <span class="quiz-emoji">⛵</span>
+                                    Srednje – zabavno ali sigurno
+                                </button>
+                            </li>
+                            <li>
+                                <button class="quiz-opcija" data-step="2" data-value="maksimalno" aria-label="Odaberi: maksimalno adrenalina">
+                                    <span class="quiz-emoji">⚡</span>
+                                    Maksimalno – brzaci, skokovi i prava avantura
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="quiz-step hidden" id="step3">
+                    <div class="quiz-card-header">
+                        <span class="quiz-step-label">Pitanje 3 od 3</span>
+                        <span class="quiz-wave-icon">≋</span>
+                    </div>
+                    <div class="quiz-progress-bar">
+                        <div class="quiz-progress-fill" style="width: 100%;"></div>
+                    </div>
+                    <div class="quiz-card-body">
+                        <h3 class="quiz-pitanje">Šta ti je važnije na raftingu?</h3>
+                        <ul class="quiz-opcije" role="list">
+                            <li>
+                                <button class="quiz-opcija" data-step="3" data-value="kupanje" aria-label="Odaberi: kupanje i opuštanje">
+                                    <span class="quiz-emoji">🏖️</span>
+                                    Kupanje, plaže i opuštanje
+                                </button>
+                            </li>
+                            <li>
+                                <button class="quiz-opcija" data-step="3" data-value="priroda" aria-label="Odaberi: priroda i vodopadi">
+                                    <span class="quiz-emoji">🏔️</span>
+                                    Netaknuta priroda i vodopadi
+                                </button>
+                            </li>
+                            <li>
+                                <button class="quiz-opcija" data-step="3" data-value="avantura" aria-label="Odaberi: nezaboravna avantura">
+                                    <span class="quiz-emoji">💪</span>
+                                    Avantura koju ću pamtiti cijeli život
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Rezultat -->
+                <div class="quiz-step hidden" id="stepRezultat">
+                    <!-- Dinamički se popunjava JS-om -->
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== ŠTA NUDIMO ========== -->
+    <section class="usluge" id="usluge" aria-labelledby="usluge-naslov">
+        <div class="usluge-container">
+
+            <header class="section-header">
+                <span class="section-tag">ŠTA NUDIMO</span>
+                <h2 class="section-title" id="usluge-naslov">Naše usluge i aktivnosti</h2>
+                <p class="section-desc">Pored raftinga i kayaka, organiziramo i niz drugih avantura.</p>
+            </header>
+
+            <!-- 4 glavne kartice -->
+            <div class="usluge-grid" role="list">
+
+                <article class="usluga-card" role="listitem">
+                    <div class="usluga-img-wrap">
+                        <img src="assets/images/usluga-rafting.jpg"
+                            alt="Rafting na rijeci Uni kroz Nacionalni park Una"
+                            class="usluga-img" loading="lazy" width="600" height="400" />
+                    </div>
+                    <div class="usluga-body">
+                        <h3 class="usluga-naziv">RAFTING</h3>
+                        <p class="usluga-opis">Doživite uzbuđenje raftinga na rijeci Uni kroz Nacionalni park!</p>
+                        <a href="#rute" class="btn-usluga" aria-label="Saznaj više o raftingu">
+                            Saznaj više <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="usluga-card" role="listitem">
+                    <div class="usluga-img-wrap">
+                        <img src="assets/images/usluga-kayak.jpg"
+                            alt="Kayak tura na rijeci Uni – mirna vožnja kroz prirodu"
+                            class="usluga-img" loading="lazy" width="600" height="400" />
+                    </div>
+                    <div class="usluga-body">
+                        <h3 class="usluga-naziv">KAYAK</h3>
+                        <p class="usluga-opis">Istražite rijeku Unu iz kayaka – mirna vožnja kroz prirodu!</p>
+                        <a href="#rute" class="btn-usluga" aria-label="Saznaj više o kayaku">
+                            Saznaj više <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="usluga-card" role="listitem">
+                    <div class="usluga-img-wrap">
+                        <img src="assets/images/usluga-smjestaj.jpg"
+                            alt="Smještaj Una Pirates – komforni bungalovi pored rijeke Une"
+                            class="usluga-img" loading="lazy" width="600" height="400" />
+                    </div>
+                    <div class="usluga-body">
+                        <h3 class="usluga-naziv">SMJEŠTAJ</h3>
+                        <p class="usluga-opis">Pogledajte neka od naših mjesta gdje možete odsjesti!</p>
+                        <a href="#smjestaj" class="btn-usluga" aria-label="Saznaj više o smještaju">
+                            Saznaj više <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="usluga-card" role="listitem">
+                    <div class="usluga-img-wrap">
+                        <img src="assets/images/usluga-rent.jpg"
+                            alt="Rent kayak i oprema za vodu – Una Pirates Bihać"
+                            class="usluga-img" loading="lazy" width="600" height="400" />
+                    </div>
+                    <div class="usluga-body">
+                        <h3 class="usluga-naziv">RENT</h3>
+                        <p class="usluga-opis">Iznajmite kajak i ostala mnogobrojna plovila za vodu i krenite!</p>
+                        <a href="#" class="btn-usluga" aria-label="Saznaj više o rent usluzi">
+                            Saznaj više <span class="btn-arrow">→</span>
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- Ostale aktivnosti -->
+            <div class="ostale-aktivnosti">
+                <p class="ostale-label">OSTALE AKTIVNOSTI</p>
+                <div class="aktivnosti-pills" role="list">
+                    <span class="aktivnost-pill" role="listitem">
+                        <i class="fa-solid fa-crosshairs aktivnost-icon"></i> Airsoft
+                    </span>
+                    <span class="aktivnost-pill" role="listitem">
+                        <i class="fa-solid fa-bullseye aktivnost-icon"></i> Paintball
+                    </span>
+                    <span class="aktivnost-pill" role="listitem">
+                        <i class="fa-solid fa-location-dot aktivnost-icon"></i> Quad
+                    </span>
+                    <span class="aktivnost-pill" role="listitem">
+                        <i class="fa-solid fa-fish aktivnost-icon"></i> Fly Fishing
+                    </span>
+                    <span class="aktivnost-pill" role="listitem">
+                        <i class="fa-solid fa-mountain aktivnost-icon"></i> Climbing
+                    </span>
+                    <span class="aktivnost-pill" role="listitem">
+                        <i class="fa-solid fa-map-location-dot aktivnost-icon"></i> Hiking
+                    </span>
+                    <span class="aktivnost-pill" role="listitem">
+                        <i class="fa-solid fa-bicycle aktivnost-icon"></i> Biking
+                    </span>
+                </div>
             </div>
         </div>
     </section>
