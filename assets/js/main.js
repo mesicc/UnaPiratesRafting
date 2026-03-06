@@ -235,3 +235,119 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     });
 })();
+
+
+// --- Galerija – Vidi više / Vidi manje ---
+(function () {
+    const btnVise   = document.getElementById('btnVidiVise');
+    const btnManje  = document.getElementById('btnVidiManje');
+    const skrivene  = document.querySelectorAll('.galerija-item--hidden');
+
+    if (!btnVise) return;
+
+    btnVise.addEventListener('click', () => {
+        skrivene.forEach(el => el.style.display = 'block');
+        btnVise.classList.add('hidden');
+        btnManje.classList.remove('hidden');
+        btnVise.setAttribute('aria-expanded', 'true');
+    });
+
+    btnManje.addEventListener('click', () => {
+        skrivene.forEach(el => el.style.display = 'none');
+        btnManje.classList.add('hidden');
+        btnVise.classList.remove('hidden');
+        btnVise.setAttribute('aria-expanded', 'false');
+
+        // Scroll nazad na vrh galerije
+        document.getElementById('galerija').scrollIntoView({ behavior: 'smooth' });
+    });
+})();
+
+// --- Lightbox ---
+(function () {
+    const lightbox    = document.getElementById('lightbox');
+    const lbImg       = document.getElementById('lightboxImg');
+    const lbCounter   = document.getElementById('lightboxCounter');
+    const lbClose     = document.getElementById('lightboxClose');
+    const lbPrev      = document.getElementById('lightboxPrev');
+    const lbNext      = document.getElementById('lightboxNext');
+    const lbOverlay   = document.getElementById('lightboxOverlay');
+
+    if (!lightbox) return;
+
+    const items = document.querySelectorAll('.galerija-item');
+    let trenutni = 0;
+
+    function getSlike() {
+        // Uzima sve slike koje su trenutno vidljive i skrivene (sve)
+        return Array.from(document.querySelectorAll('.galerija-item img'));
+    }
+
+    function otvoriLightbox(index) {
+        const slike = getSlike();
+        trenutni = index;
+        lbImg.src = slike[trenutni].src;
+        lbImg.alt = slike[trenutni].alt;
+        lbCounter.textContent = `${trenutni + 1} / ${slike.length}`;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden'; // Blokira scroll
+    }
+
+    function zatvoriLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = ''; // Vraća scroll
+        lbImg.src = '';
+    }
+
+    function sljedeca() {
+        const slike = getSlike();
+        trenutni = (trenutni + 1) % slike.length;
+        lbImg.src = slike[trenutni].src;
+        lbImg.alt = slike[trenutni].alt;
+        lbCounter.textContent = `${trenutni + 1} / ${slike.length}`;
+    }
+
+    function prethodna() {
+        const slike = getSlike();
+        trenutni = (trenutni - 1 + slike.length) % slike.length;
+        lbImg.src = slike[trenutni].src;
+        lbImg.alt = slike[trenutni].alt;
+        lbCounter.textContent = `${trenutni + 1} / ${slike.length}`;
+    }
+
+    // Klik na sliku
+    items.forEach((item, i) => {
+        item.addEventListener('click', () => otvoriLightbox(i));
+    });
+
+    // Zatvaranje
+    lbClose.addEventListener('click', zatvoriLightbox);
+    lbOverlay.addEventListener('click', zatvoriLightbox);
+
+    // Navigacija
+    lbNext.addEventListener('click', sljedeca);
+    lbPrev.addEventListener('click', prethodna);
+
+    // Tipkovnica
+    document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape')     zatvoriLightbox();
+        if (e.key === 'ArrowRight') sljedeca();
+        if (e.key === 'ArrowLeft')  prethodna();
+    });
+
+    // Swipe podrška za mobilne uređaje
+    let touchStartX = 0;
+    lightbox.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    lightbox.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) > 50) {
+            diff > 0 ? sljedeca() : prethodna();
+        }
+    }, { passive: true });
+})();
