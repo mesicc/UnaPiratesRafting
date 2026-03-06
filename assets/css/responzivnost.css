@@ -235,3 +235,44 @@
         font-size: 15px;
     }
 }
+
+/* ============================================================
+   RESPONZIVNOST – recenzije
+============================================================ */
+
+/* Tablet – 2 kartice */
+@media (max-width: 1024px) {
+    .reviews-slide {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile – 1 kartica */
+@media (max-width: 600px) {
+    .recenzije { padding: 48px 16px; }
+
+    .reviews-slide {
+        grid-template-columns: 1fr;
+    }
+
+    .reviews-arrow {
+        width: 32px;
+        min-width: 32px;
+        height: 32px;
+        font-size: 12px;
+        margin-top: 60px;
+    }
+
+    .google-bar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-google-review {
+        width: 100%;
+        text-align: center;
+    }
+
+    .google-score { font-size: 18px; }
+    .google-zvjezdice { font-size: 15px; }
+}

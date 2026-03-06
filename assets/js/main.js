@@ -351,3 +351,150 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     }, { passive: true });
 })();
+
+
+// ============================================================
+// RECENZIJE SLIDER – main.js dodatak
+// Dodaj unutar DOMContentLoaded
+// ============================================================
+
+(function () {
+
+    const slider   = document.getElementById('reviewsSlider');
+    const btnPrev  = document.getElementById('reviewsPrev');
+    const btnNext  = document.getElementById('reviewsNext');
+    const dotsWrap = document.getElementById('reviewsDots');
+
+    if (!slider) return;
+
+    // Sve kartice u nizu
+    const kartice = Array.from(slider.querySelectorAll('.review-card'));
+    const ukupno  = kartice.length;
+    let trenutni  = 0;
+
+    // ---- Koliko kartica pokazati ovisno o širini ----
+    function vidljivih() {
+        if (window.innerWidth <= 600)  return 1;
+        if (window.innerWidth <= 1024) return 2;
+        return 3;
+    }
+
+    // ---- Generiraj dots dinamički ----
+    function generisiDots() {
+        dotsWrap.innerHTML = '';
+        const n      = vidljivih();
+        const stranicy = Math.ceil(ukupno / n);
+
+        for (let i = 0; i < stranicy; i++) {
+            const dot = document.createElement('button');
+            dot.className   = 'reviews-dot' + (i === 0 ? ' active' : '');
+            dot.setAttribute('role', 'tab');
+            dot.setAttribute('aria-label', `Stranica ${i + 1}`);
+            dot.setAttribute('aria-selected', i === 0 ? 'true' : 'false');
+            dot.dataset.index = i;
+
+            dot.addEventListener('click', () => {
+                trenutni = i * vidljivih();
+                render();
+            });
+
+            dotsWrap.appendChild(dot);
+        }
+    }
+
+    // ---- Render – prikaži n kartica od trenutnog indexa ----
+    function render() {
+        const n       = vidljivih();
+        const maxStart = ukupno - n;
+        if (trenutni > maxStart) trenutni = maxStart;
+        if (trenutni < 0)        trenutni = 0;
+
+        kartice.forEach((card, i) => {
+            const vidljiva = i >= trenutni && i < trenutni + n;
+            card.style.display = vidljiva ? 'flex' : 'none';
+        });
+
+        // Strelice
+        btnPrev.disabled = trenutni === 0;
+        btnNext.disabled = trenutni >= maxStart;
+
+        // Dots
+        const aktivniDot = Math.floor(trenutni / n);
+        const dots = dotsWrap.querySelectorAll('.reviews-dot');
+        dots.forEach((d, i) => {
+            d.classList.toggle('active', i === aktivniDot);
+            d.setAttribute('aria-selected', i === aktivniDot ? 'true' : 'false');
+        });
+    }
+
+    // ---- Navigacija ----
+    btnPrev.addEventListener('click', () => {
+        if (trenutni > 0) {
+            trenutni--;
+            render();
+        }
+    });
+
+    btnNext.addEventListener('click', () => {
+        if (trenutni < ukupno - vidljivih()) {
+            trenutni++;
+            render();
+        }
+    });
+
+    // ---- Swipe na mobilnim ----
+    let touchStartX = 0;
+
+    slider.addEventListener('touchstart', e => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    slider.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].screenX;
+        if (Math.abs(diff) < 50) return;
+
+        if (diff > 0 && trenutni < ukupno - vidljivih()) {
+            trenutni++;
+            render();
+        } else if (diff < 0 && trenutni > 0) {
+            trenutni--;
+            render();
+        }
+    }, { passive: true });
+
+    // ---- Resize ----
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(() => {
+            generisiDots();
+            render();
+        }, 150);
+    });
+
+    // ---- Read More / Read Less ----
+    slider.addEventListener('click', e => {
+        const btn = e.target.closest('.review-read-more');
+        if (!btn) return;
+
+        const tekst    = btn.previousElementSibling;
+        const prosiren = tekst.classList.contains('review-tekst--prosiren');
+
+        if (prosiren) {
+            tekst.classList.remove('review-tekst--prosiren');
+            tekst.classList.add('review-tekst--skracen');
+            btn.textContent = 'Read more';
+            btn.setAttribute('aria-expanded', 'false');
+        } else {
+            tekst.classList.remove('review-tekst--skracen');
+            tekst.classList.add('review-tekst--prosiren');
+            btn.textContent = 'Read less';
+            btn.setAttribute('aria-expanded', 'true');
+        }
+    });
+
+    // ---- Init ----
+    generisiDots();
+    render();
+
+})();

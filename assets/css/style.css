@@ -1356,3 +1356,326 @@ ul { list-style: none; }
 .lightbox-next:hover   { background: rgba(255,255,255,0.25); transform: translateY(-50%) translateX(2px); }
 
 
+/* ============================================================
+   RECENZIJE – style.css dodatak
+============================================================ */
+.recenzije {
+    background-color: #EDEAE4;
+    padding: 80px 24px;
+}
+
+.recenzije-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ---- Google bar ---- */
+.google-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-bottom: 40px;
+}
+
+.google-bar-left {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.google-top-row {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.google-logo {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -0.5px;
+}
+
+.google-reviews-label {
+    font-size: 20px;
+    font-weight: 400;
+    color: #1a1a1a;
+}
+
+.g-blue   { color: #4285F4; }
+.g-red    { color: #EA4335; }
+.g-yellow { color: #FBBC05; }
+.g-green  { color: #34A853; }
+
+.google-rating {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.google-score {
+    font-size: 22px;
+    font-weight: 900;
+    color: #1a1a1a;
+}
+
+.google-zvjezdice {
+    display: flex;
+    gap: 2px;
+    color: #FBBC05;
+    font-size: 18px;
+}
+
+.google-count {
+    font-size: 15px;
+    color: #666;
+}
+
+.btn-google-review {
+    background: #4285F4;
+    color: #fff;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    padding: 12px 24px;
+    border-radius: 50px;
+    transition: background 0.2s, transform 0.15s;
+    white-space: nowrap;
+    display: inline-block;
+}
+
+.btn-google-review:hover {
+    background: #3367D6;
+    transform: translateY(-1px);
+}
+
+/* ---- Slider wrapper ---- */
+.reviews-slider-wrap {
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.reviews-slider {
+    flex: 1;
+    overflow: hidden;
+    min-width: 0;
+}
+
+/* ---- Slide – grid od kartica ---- */
+.reviews-slide {
+    display: none;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.reviews-slide.active {
+    display: grid;
+}
+
+/* ---- Kartica ---- */
+.review-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 22px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    animation: reviewFadeIn 0.3s ease;
+}
+
+@keyframes reviewFadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Author */
+.review-author {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.review-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+/* Google G badge */
+.review-avatar::after {
+    content: 'G';
+    position: absolute;
+    bottom: -2px;
+    right: -2px;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    font-size: 10px;
+    font-weight: 900;
+    color: #4285F4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 16px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.2);
+}
+
+.review-author-info {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+}
+
+.review-name {
+    font-size: 14px;
+    font-weight: 700;
+    color: #1a1a1a;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.review-verified {
+    font-size: 12px;
+    color: #4285F4;
+    flex-shrink: 0;
+}
+
+.review-meta {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.review-g-icon {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.review-time {
+    font-size: 12px;
+    color: #888;
+}
+
+/* Zvjezdice */
+.review-stars {
+    display: flex;
+    gap: 2px;
+    color: #FBBC05;
+    font-size: 14px;
+}
+
+/* Tekst – skraćen na 4 linije */
+.review-tekst {
+    font-size: 14px;
+    color: #444;
+    line-height: 1.65;
+    flex: 1;
+    margin: 0;
+}
+
+.review-tekst--skracen {
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    line-clamp: 4;                  /* ← standardna verzija, uklanja warning */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.review-tekst--prosiren {
+    display: block;
+    overflow: visible;
+}
+
+/* Read more dugme */
+.review-read-more {
+    background: none;
+    border: none;
+    padding: 0;
+    font-family: var(--font);
+    font-size: 13px;
+    font-weight: 600;
+    color: #4285F4;
+    cursor: pointer;
+    align-self: flex-start;
+    transition: opacity 0.2s;
+}
+
+.review-read-more:hover { opacity: 0.7; }
+
+/* ---- Strelice ---- */
+.reviews-arrow {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    border-radius: 50%;
+    border: 1.5px solid #ddd;
+    background: #fff;
+    color: #333;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    transition: border-color 0.2s, color 0.2s, opacity 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    margin-top: 80px;
+}
+
+.reviews-arrow:hover:not(:disabled) {
+    border-color: var(--orange);
+    color: var(--orange);
+}
+
+.reviews-arrow:disabled {
+    opacity: 0.25;
+    cursor: default;
+}
+
+/* ---- Dots ---- */
+.reviews-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.reviews-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background: #ccc;
+    cursor: pointer;
+    padding: 0;
+    transition: background 0.2s, transform 0.2s;
+}
+
+.reviews-dot.active {
+    background: #4285F4;
+    transform: scale(1.3);
+}
+
