@@ -55,3 +55,62 @@
     .hero-desc      { font-size: 14px; }
 }
 
+/* ---- RUTE I DOŽIVLJAJI ---- */
+@media (max-width: 1024px) {
+    .ruta-naziv { font-size: 17px; }
+    .ruta-opis  { font-size: 13px; }
+}
+
+@media (max-width: 920px) {
+    .rute { padding: 60px 20px; }
+
+    .rute-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .ruta-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 480px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* Na ovoj širini vrati normalne fontove jer je 1 kartica šira */
+    .ruta-naziv { font-size: clamp(18px, 2.5vw, 22px); }
+    .ruta-opis  { font-size: 14px; }
+
+    .btn-saznaj,
+    .btn-rezerviraj {
+        font-size: 13px;
+        padding: 10px 18px;
+    }
+
+    .section-desc { font-size: 15px; }
+}
+
+@media (max-width: 600px) {
+    .rute { padding: 48px 16px; }
+
+    .rute-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .ruta-card:last-child {
+        grid-column: auto;
+        max-width: 100%;
+    }
+
+    .ruta-body    { padding: 20px; }
+    .ruta-naziv   { font-size: 20px; }
+    .ruta-opis    { font-size: 14px; }
+    .section-title { font-size: 30px; }
+    .section-desc  { font-size: 14px; }
+
+    .btn-saznaj,
+    .btn-rezerviraj {
+        font-size: 14px;
+        padding: 11px 20px;
+    }
+}
