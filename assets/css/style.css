@@ -731,12 +731,14 @@ ul { list-style: none; }
 
 /* Card header (gradient) */
 .quiz-card-header {
-    background: linear-gradient(135deg, #3EB489 0%, #4AADE8 100%);
+    background: linear-gradient(135deg, #1D7267 0%, #34a394 100%);
     padding: 22px 28px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
+
+/*. boja prva #3EB489*/
 
 .quiz-step-label {
     font-size: 13px;
@@ -752,7 +754,7 @@ ul { list-style: none; }
 
 /* Progress bar */
 .quiz-progress-bar {
-    background: linear-gradient(135deg, #3EB489 0%, #4AADE8 100%);
+    background: linear-gradient(135deg, #1D7267 0%, #34a394 100%);
     padding: 14px 28px 20px;
 }
 
@@ -2426,3 +2428,309 @@ ul { list-style: none; }
     transform: scale(1.1);
     box-shadow: 0 6px 28px rgba(37,211,102,0.6);
 }
+
+
+/* ============================================================
+   O-NAMA.CSS – specifičan CSS samo za o-nama.html stranicu
+============================================================ */
+
+/* ---- Container ---- */
+.on-container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.on-container--narrow {
+    max-width: 720px;
+}
+
+/* ============================================================
+   HERO
+============================================================ */
+.on-hero {
+    position: relative;
+    height: 480px;
+    background: url('../images/o-nama-header.jpg') center center / cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.on-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(14,32,24,0.55) 0%, rgba(14,32,24,0.75) 100%);
+}
+
+.on-hero-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Breadcrumb */
+.on-breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.65);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.on-breadcrumb a {
+    color: rgba(255,255,255,0.65);
+    transition: color 0.2s;
+}
+
+.on-breadcrumb a:hover { color: #fff; }
+
+.on-breadcrumb i {
+    font-size: 10px;
+    color: rgba(255,255,255,0.4);
+}
+
+.on-hero-title {
+    font-size: clamp(40px, 6vw, 72px);
+    font-weight: 900;
+    color: #fff;
+    line-height: 1.05;
+    margin: 0;
+}
+
+.on-hero-sub {
+    font-size: 17px;
+    color: rgba(255,255,255,0.75);
+    margin: 0;
+}
+
+/* ============================================================
+   INTRO
+============================================================ */
+.on-intro {
+    background: #EDEAE4;
+    padding: 72px 24px 48px;
+    text-align: center;
+}
+
+.on-intro-title {
+    font-size: clamp(28px, 4vw, 42px);
+    font-weight: 900;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+}
+
+.on-intro-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: var(--orange);
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.on-intro-desc {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.75;
+    max-width: 620px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   FOUNDER
+============================================================ */
+.on-founder {
+    background: #EDEAE4;
+    padding: 16px 24px 72px;
+}
+
+.on-founder-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 48px 40px;
+    text-align: center;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.07);
+}
+
+.on-founder-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+    margin-bottom: 16px;
+}
+
+.on-founder-ime {
+    font-size: 22px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.on-founder-role {
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--orange);
+    margin-bottom: 20px;
+    letter-spacing: 0.5px;
+}
+
+.on-founder-bio {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.75;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* ============================================================
+   SKIPERI
+============================================================ */
+.on-skiperi {
+    background: #EDEAE4;
+    padding: 0 24px 80px;
+}
+
+.on-skiperi-title {
+    font-size: clamp(26px, 3.5vw, 38px);
+    font-weight: 900;
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.on-skiperi-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.on-skiper-card {
+    background: #fff;
+    border-radius: 16px;
+    padding: 28px 20px 24px;
+    text-align: center;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.06);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.on-skiper-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.1);
+}
+
+.on-skiper-img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #fff;
+    box-shadow: 0 3px 14px rgba(0,0,0,0.13);
+    margin-bottom: 14px;
+}
+
+.on-skiper-ime {
+    font-size: 16px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 4px;
+}
+
+.on-skiper-role {
+    font-size: 13px;
+    color: #888;
+    font-weight: 600;
+}
+
+/* ============================================================
+   CLOSING TEXT
+============================================================ */
+.on-closing {
+    background: #EDEAE4;
+    padding: 0 24px 80px;
+}
+
+.on-closing-text {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.85;
+    text-align: center;
+    background: #fff;
+    border-radius: 16px;
+    padding: 40px 48px;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.05);
+}
+
+/* ============================================================
+   VRIJEDNOSTI
+============================================================ */
+.on-vrijednosti {
+    background: #fff;
+    padding: 80px 24px;
+}
+
+.on-vr-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin-top: 48px;
+}
+
+.on-vr-card {
+    background: #EDEAE4;
+    border-radius: 16px;
+    padding: 32px 24px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.on-vr-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0,0,0,0.08);
+}
+
+.on-vr-ikona {
+    width: 56px;
+    height: 56px;
+    border-radius: 14px;
+    background: #fff4ee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    color: var(--orange);
+    font-size: 22px;
+}
+
+.on-vr-title {
+    font-size: 15px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.on-vr-desc {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.65;
+}
+
+/* ============================================================
+   RESPONZIVNOST – o-nama
+   (u responzivnost.css dodaj @media blokove ispod)
+============================================================ */

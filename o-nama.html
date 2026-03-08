@@ -1,0 +1,359 @@
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>O Nama – Una Pirates | Rafting na Uni</title>
+    <meta name="description" content="Upoznajte ekipu Una Pirates – licencirane IRF vodiče koji vas vode kroz najljepše dionice rijeke Une u Nacionalnom parku Una." />
+    <link rel="icon" type="image/webp" href="assets/images/logo.webp" />
+    <link rel="apple-touch-icon" href="assets/images/logo.webp" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/o-nama.css" />
+    <link rel="stylesheet" href="assets/css/responzivnost.css" />
+  </head>
+  <body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/logo.webp" alt="Una Pirates Logo" />
+          <div class="nav-logo-text">
+            <span class="nav-logo-main">Rafting na Uni</span>
+            <span class="nav-logo-sub">BY UNA PIRATES</span>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">POČETNA</a></li>
+          <li><a href="o-nama.html" class="nav-link active">O NAMA</a></li>
+          <li><a href="index.html#rute" class="nav-link">RUTE</a></li>
+          <li><a href="index.html#team-building" class="nav-link">TEAM BUILDING</a></li>
+          <li><a href="index.html#smjestaj" class="nav-link">SMJEŠTAJ</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="lang-switcher" id="langSwitcher">
+            <button class="lang-btn" id="langBtn">
+              <i class="fa-solid fa-globe"></i>
+              <span id="currentLang">BS</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <div class="lang-option active" data-lang="BS">
+                <img src="https://flagcdn.com/w20/ba.png" alt="BA" /> Bosanski
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div class="lang-option" data-lang="EN">
+                <img src="https://flagcdn.com/w20/gb.png" alt="EN" /> English
+              </div>
+              <div class="lang-option" data-lang="DE">
+                <img src="https://flagcdn.com/w20/de.png" alt="DE" /> Deutsch
+              </div>
+              <div class="lang-option" data-lang="AR">
+                <img src="https://flagcdn.com/w20/sa.png" alt="AR" /> العربية
+              </div>
+            </div>
+          </div>
+          <a href="index.html#rezervacija" class="btn-rezervisi">Rezerviši</a>
+          <button class="hamburger" id="hamburger" aria-label="Otvori meni">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== MOBILE MENU ========== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/logo.webp" alt="Una Pirates Logo" />
+          <div class="nav-logo-text">
+            <span class="nav-logo-main">Rafting na Uni</span>
+            <span class="nav-logo-sub">BY UNA PIRATES</span>
+          </div>
+        </a>
+        <div class="mobile-menu-right">
+          <div class="lang-switcher" id="langSwitcherMobile">
+            <button class="lang-btn lang-btn-dark" id="langBtnMobile">
+              <i class="fa-solid fa-globe"></i>
+              <span id="currentLangMobile">BS</span>
+              <i class="fa-solid fa-chevron-down" id="langArrowMobile"></i>
+            </button>
+            <div class="lang-dropdown lang-dropdown-mobile" id="langDropdownMobile">
+              <div class="lang-option active" data-lang="BS">
+                <img src="https://flagcdn.com/w20/ba.png" alt="BA" /> Bosanski
+                <i class="fa-solid fa-check"></i>
+              </div>
+              <div class="lang-option" data-lang="EN">
+                <img src="https://flagcdn.com/w20/gb.png" alt="EN" /> English
+              </div>
+              <div class="lang-option" data-lang="DE">
+                <img src="https://flagcdn.com/w20/de.png" alt="DE" /> Deutsch
+              </div>
+              <div class="lang-option" data-lang="AR">
+                <img src="https://flagcdn.com/w20/sa.png" alt="AR" /> العربية
+              </div>
+            </div>
+          </div>
+          <button class="close-menu" id="closeMenu" aria-label="Zatvori meni">
+            <i class="fa-solid fa-xmark"></i>
+          </button>
+        </div>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Početna</a></li>
+        <li><a href="o-nama.html" class="mobile-nav-link">O nama</a></li>
+        <li><a href="index.html#rute" class="mobile-nav-link">Rute</a></li>
+        <li><a href="index.html#team-building" class="mobile-nav-link">Team Building</a></li>
+        <li><a href="index.html#smjestaj" class="mobile-nav-link">Smještaj</a></li>
+      </ul>
+      <a href="index.html#rezervacija" class="btn-rezervisi btn-rezervisi-full">Rezerviši</a>
+    </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+    <!-- ========== HERO ========== -->
+    <section class="on-hero" aria-label="O nama hero">
+      <div class="on-hero-overlay"></div>
+      <div class="on-hero-content">
+        <nav class="on-breadcrumb" aria-label="Breadcrumb">
+          <a href="index.html">Početna</a>
+          <i class="fa-solid fa-chevron-right"></i>
+          <span>O nama</span>
+        </nav>
+        <h1 class="on-hero-title">O nama</h1>
+        <p class="on-hero-sub">Naša Ekipa</p>
+      </div>
+    </section>
+
+    <!-- ========== INTRO ========== -->
+    <section class="on-intro" aria-labelledby="on-intro-naslov">
+      <div class="on-container">
+        <h2 class="on-intro-title" id="on-intro-naslov">Naša Ekipa</h2>
+        <span class="on-intro-tag">UPOZNAJTE LJUDE IZA AVANTURE</span>
+        <p class="on-intro-desc">
+          Una Pirates je nevjerojatan rafting tim koji nadilazi sva vaša očekivanja.
+          Njihova strast prema avanturističkom turizmu i prekrasnoj rijeci Uni,
+          čini ih izvrsnim izborom za sve ljubitelje prirode i adrenalina.
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== FOUNDER ========== -->
+    <section class="on-founder" aria-labelledby="on-founder-naslov">
+      <div class="on-container on-container--narrow">
+        <div class="on-founder-card">
+          <img
+            src="assets/images/skiperi/hadi.jpg"
+            alt="Hadi – Founder Una Pirates"
+            class="on-founder-img"
+            width="120"
+            height="120"
+            loading="lazy"
+          />
+          <h3 class="on-founder-ime" id="on-founder-naslov">Tata Hadi</h3>
+          <span class="on-founder-role">Founder</span>
+          <p class="on-founder-bio">
+            Zdravo Raja, ja sam Hadi! Dobrodošli na Una Pirates! Naša ekipa je
+            posvećena nezaboravnim avanturama u raftingu. Naši momci, stručni
+            vodiči će vas provesti kroz uzbudljive spustove niz brzu rijeku,
+            otkrivajući vam prelijepe pejzaže.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== SKIPERI ========== -->
+    <section class="on-skiperi" aria-labelledby="on-skiperi-naslov">
+      <div class="on-container">
+        <h2 class="on-skiperi-title" id="on-skiperi-naslov">Skiperi</h2>
+        <div class="on-skiperi-grid">
+
+          <article class="on-skiper-card">
+            <img src="assets/images/skiperi/irman.jpg" alt="Irman – Team Lead" class="on-skiper-img" width="100" height="100" loading="lazy" />
+            <h3 class="on-skiper-ime">Irman</h3>
+            <span class="on-skiper-role">Team Lead</span>
+          </article>
+
+          <article class="on-skiper-card">
+            <img src="assets/images/skiperi/leon.jpg" alt="Leon – Skiper" class="on-skiper-img" width="100" height="100" loading="lazy" />
+            <h3 class="on-skiper-ime">Leon</h3>
+            <span class="on-skiper-role">Skiper</span>
+          </article>
+
+          <article class="on-skiper-card">
+            <img src="assets/images/skiperi/skender.jpg" alt="Skender – Skiper" class="on-skiper-img" width="100" height="100" loading="lazy" />
+            <h3 class="on-skiper-ime">Skender</h3>
+            <span class="on-skiper-role">Skiper</span>
+          </article>
+
+          <article class="on-skiper-card">
+            <img src="assets/images/skiperi/endi.jpg" alt="Endi – Skiper" class="on-skiper-img" width="100" height="100" loading="lazy" />
+            <h3 class="on-skiper-ime">Endi</h3>
+            <span class="on-skiper-role">Skiper</span>
+          </article>
+
+          <article class="on-skiper-card">
+            <img src="assets/images/skiperi/galic.jpg" alt="Narcis – Skiper" class="on-skiper-img" width="100" height="100" loading="lazy" />
+            <h3 class="on-skiper-ime">Narcis</h3>
+            <span class="on-skiper-role">Skiper</span>
+          </article>
+
+          <article class="on-skiper-card">
+            <img src="assets/images/skiperi/haris.jpg" alt="Ami – Skiper" class="on-skiper-img" width="100" height="100" loading="lazy" />
+            <h3 class="on-skiper-ime">Ami</h3>
+            <span class="on-skiper-role">Skiper</span>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CLOSING TEXT ========== -->
+    <section class="on-closing" aria-label="O nama zatvaranje">
+      <div class="on-container on-container--narrow">
+        <p class="on-closing-text">
+          Kada se upustite u avanturu s Una Pirates timom, osjetit ćete se potpuno
+          sigurno i ugodno, jer su oni licencirani IRF vodiči, koji su obučeni da
+          se nose s bilo kojom situacijom na rijeci. Oni su posvećeni vašoj
+          sigurnosti i udobnosti, ali i tome da vaše iskustvo bude nezaboravno.
+          Ako želite doživjeti avanturu i otkriti skrivene ljepote rijeke Une,
+          Una Pirates je pravi izbor za vas!
+        </p>
+      </div>
+    </section>
+
+    <!-- ========== VRIJEDNOSTI ========== -->
+    <section class="on-vrijednosti" aria-labelledby="on-vrijednosti-naslov">
+      <div class="on-container">
+        <header class="section-header">
+          <span class="section-tag">ZAŠTO MI</span>
+          <h2 class="section-title dark" id="on-vrijednosti-naslov">Šta nas čini posebnim?</h2>
+        </header>
+        <div class="on-vr-grid">
+
+          <div class="on-vr-card">
+            <div class="on-vr-ikona">
+              <i class="fa-solid fa-shield-halved"></i>
+            </div>
+            <h3 class="on-vr-title">Sigurnost na prvom mjestu</h3>
+            <p class="on-vr-desc">Licencirani IRF vodiči, prsluk i kaciga za svakog gosta, jasna instruktaža prije svakog spusta.</p>
+          </div>
+
+          <div class="on-vr-card">
+            <div class="on-vr-ikona">
+              <i class="fa-solid fa-medal"></i>
+            </div>
+            <h3 class="on-vr-title">20+ godina iskustva</h3>
+            <p class="on-vr-desc">Dvije decenije na rijeci Uni znače da svaki detalj vaše avanture poznajemo napamet.</p>
+          </div>
+
+          <div class="on-vr-card">
+            <div class="on-vr-ikona">
+              <i class="fa-solid fa-people-group"></i>
+            </div>
+            <h3 class="on-vr-title">5.000+ zadovoljnih gostiju</h3>
+            <p class="on-vr-desc">Pet zvjezdica na Googleu nije slučajnost – to je rezultat rada i posvećenosti svakog člana ekipe.</p>
+          </div>
+
+          <div class="on-vr-card">
+            <div class="on-vr-ikona">
+              <i class="fa-solid fa-leaf"></i>
+            </div>
+            <h3 class="on-vr-title">Ljubav prema prirodi</h3>
+            <p class="on-vr-desc">Nacionalni park Una je naš dom. Čuvamo ga i trudimo se da svaki gost ode s još većim poštovanjem prema prirodi.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta" aria-labelledby="cta-naslov">
+      <div class="cta-container">
+        <h2 class="cta-title" id="cta-naslov">Spremni za Unu?</h2>
+        <p class="cta-desc">Rezervišite termin online ili nas pozovite za dogovor. Termini se brzo pune!</p>
+        <div class="cta-btns">
+          <a href="index.html#rezervacija" class="btn-cta-primary">Rezerviraj Svoj Termin</a>
+          <a href="https://wa.me/38761782339?text=Zdravo%2C%20zanima%20me%20rezervacija%20raftinga!"
+             target="_blank" rel="noopener noreferrer"
+             class="btn-cta-outline"
+             aria-label="Kontaktirajte nas na WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i> Ili nas pozovite na WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-main">
+        <div class="footer-container">
+          <div class="footer-col footer-col--brand">
+            <a href="index.html" class="footer-logo" aria-label="Una Pirates – početna stranica">
+              <img src="assets/images/logo.webp" alt="Una Pirates logo" width="52" height="52" />
+              <div class="footer-logo-text">
+                <span class="footer-logo-main">Rafting na Uni</span>
+                <span class="footer-logo-sub">BY UNA PIRATES</span>
+              </div>
+            </a>
+            <div class="footer-social" aria-label="Socijalne mreže">
+              <a href="https://www.instagram.com/una_pirates" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram profil Una Pirates">
+                <i class="fa-brands fa-instagram"></i>
+              </a>
+              <a href="https://www.tiktok.com/@una.pirates" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="TikTok profil Una Pirates">
+                <i class="fa-brands fa-tiktok"></i>
+              </a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title">BRZI LINKOVI</h3>
+            <nav aria-label="Footer navigacija">
+              <ul class="footer-links">
+                <li><a href="index.html" class="footer-link">Početna</a></li>
+                <li><a href="index.html#rute" class="footer-link">Rute</a></li>
+                <li><a href="o-nama.html" class="footer-link">O nama</a></li>
+                <li><a href="index.html#team-building" class="footer-link">Team Building</a></li>
+                <li><a href="index.html#rezervacija" class="footer-link">Rezerviši</a></li>
+                <li><a href="admin/login.html" class="footer-link">Admin</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title">KONTAKT &amp; LOKACIJA</h3>
+            <ul class="footer-kontakt">
+              <li class="footer-kontakt-item">
+                <i class="fa-solid fa-location-dot footer-kontakt-icon"></i>
+                <span>NP Una, Bihać, Bosnia &amp; Herzegovina</span>
+              </li>
+              <li class="footer-kontakt-item">
+                <i class="fa-solid fa-phone footer-kontakt-icon"></i>
+                <a href="tel:+38761782339" class="footer-kontakt-link">+387 61 782 339</a>
+              </li>
+              <li class="footer-kontakt-item">
+                <i class="fa-solid fa-envelope footer-kontakt-icon"></i>
+                <a href="mailto:info@unapirates.com" class="footer-kontakt-link">info@unapirates.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+          <p class="footer-copyright">© 2026 UnaPirates. Sva prava pridržana.</p>
+          <p class="footer-credit">Web development by <a href="#" class="footer-credit-link">Kemal Mešić</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- WhatsApp floating dugme -->
+    <a href="https://wa.me/38761782339?text=Zdravo%2C%20zanima%20me%20rezervacija%20raftinga!"
+       target="_blank" rel="noopener noreferrer"
+       class="whatsapp-float"
+       aria-label="Kontaktirajte nas na WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>

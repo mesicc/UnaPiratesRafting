@@ -445,3 +445,70 @@
         font-size: 26px;
     }
 }
+
+
+
+/* ============================================================
+   RESPONZIVNOST – O-NAMA stranica
+============================================================ */
+
+/* ---- Tablet ---- */
+@media (max-width: 920px) {
+    .on-hero { height: 380px; }
+
+    .on-vr-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .on-skiperi-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+    }
+}
+
+/* ---- Mobile ---- */
+@media (max-width: 640px) {
+    .on-hero { height: 320px; }
+
+    .on-intro { padding: 56px 16px 36px; }
+
+    .on-founder { padding: 16px 16px 56px; }
+
+    .on-founder-card {
+        padding: 36px 24px;
+    }
+
+    .on-skiperi { padding: 0 16px 56px; }
+
+    .on-skiperi-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 16px;
+    }
+
+    .on-closing { padding: 0 16px 56px; }
+
+    .on-closing-text {
+        padding: 28px 24px;
+        font-size: 15px;
+    }
+
+    .on-vrijednosti { padding: 56px 16px; }
+
+    .on-vr-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    .on-vr-card { padding: 24px 16px; }
+}
+
+/* ---- Small mobile ---- */
+@media (max-width: 400px) {
+    .on-skiperi-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .on-vr-grid {
+        grid-template-columns: 1fr;
+    }
+}
