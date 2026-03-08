@@ -1894,3 +1894,102 @@ ul { list-style: none; }
     background: #000;
 }
 
+
+/* ============================================================
+   FAQ – Pitanja i Odgovori
+============================================================ */
+.faq {
+    background-color: #EDEAE4;
+    padding: 80px 24px;
+}
+
+.faq-container {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.faq .section-header {
+    margin-bottom: 48px;
+}
+
+/* ---- Lista ---- */
+.faq-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+/* ---- Jedan item ---- */
+.faq-item {
+    background: #fff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.05);
+    transition: box-shadow 0.25s;
+}
+
+.faq-item.open {
+    box-shadow: 0 4px 24px rgba(0,0,0,0.10);
+}
+
+/* ---- Pitanje (button) ---- */
+.faq-pitanje {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 22px 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font);
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    text-align: left;
+    transition: color 0.2s;
+}
+
+.faq-pitanje:hover {
+    color: var(--orange);
+}
+
+.faq-pitanje[aria-expanded="true"] {
+    color: var(--orange);
+}
+
+/* ---- Ikona chevron ---- */
+.faq-ikona {
+    font-size: 14px;
+    color: #999;
+    flex-shrink: 0;
+    transition: transform 0.3s ease, color 0.2s;
+}
+
+.faq-pitanje[aria-expanded="true"] .faq-ikona {
+    transform: rotate(180deg);
+    color: var(--orange);
+}
+
+/* ---- Odgovor ---- */
+.faq-odgovor {
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.35s ease, padding 0.35s ease;
+    padding: 0 24px;
+}
+
+.faq-odgovor.otvoren {
+    max-height: 400px;
+    padding: 0 24px 22px;
+}
+
+.faq-odgovor p {
+    font-size: 15px;
+    color: #555;
+    line-height: 1.75;
+    margin: 0;
+    border-top: 1px solid #f0ede8;
+    padding-top: 16px;
+}

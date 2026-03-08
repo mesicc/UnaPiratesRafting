@@ -632,3 +632,39 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
 })();
+
+
+// ---- FAQ Accordion ----
+(function () {
+    const pitanja = document.querySelectorAll('.faq-pitanje');
+    if (!pitanja.length) return;
+
+    pitanja.forEach(btn => {
+        btn.addEventListener('click', function () {
+            const item     = this.closest('.faq-item');
+            const odgovor  = document.getElementById(this.getAttribute('aria-controls'));
+            const jeOtvoren = this.getAttribute('aria-expanded') === 'true';
+
+            // Zatvori sve ostale
+            pitanja.forEach(drugi => {
+                if (drugi === this) return;
+                drugi.setAttribute('aria-expanded', 'false');
+                drugi.closest('.faq-item').classList.remove('open');
+                const drugOdgovor = document.getElementById(drugi.getAttribute('aria-controls'));
+                drugOdgovor.classList.remove('otvoren');
+                drugOdgovor.hidden = false; // hidden ne koristimo za animaciju
+            });
+
+            // Toggle kliknuto
+            if (jeOtvoren) {
+                this.setAttribute('aria-expanded', 'false');
+                item.classList.remove('open');
+                odgovor.classList.remove('otvoren');
+            } else {
+                this.setAttribute('aria-expanded', 'true');
+                item.classList.add('open');
+                odgovor.classList.add('otvoren');
+            }
+        });
+    });
+})();
