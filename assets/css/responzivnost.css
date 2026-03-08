@@ -434,3 +434,14 @@
         align-items: center;
     }
 }
+
+/* ---- WhatsApp float ---- */
+@media (max-width: 560px) {
+    .whatsapp-float {
+        bottom: 18px;
+        right: 18px;
+        width: 52px;
+        height: 52px;
+        font-size: 26px;
+    }
+}
