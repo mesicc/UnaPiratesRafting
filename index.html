@@ -889,6 +889,78 @@
         </div>
     </section>
 
+    <!-- ========== VIDEO SEKCIJA ========== -->
+    <section class="video-sekcija" id="video" aria-labelledby="video-naslov">
+        <div class="video-container">
+
+            <header class="section-header">
+                <span class="section-tag">POGLEDAJTE VIDEO</span>
+                <h2 class="section-title dark" id="video-naslov">Kako izgleda rafting?</h2>
+            </header>
+
+            <!-- Video thumbnail + play -->
+            <div class="video-wrap" id="videoWrap" role="button" aria-label="Pokreni video" tabindex="0">
+                <video
+                    class="video-player"
+                    id="videoPlayer"
+                    poster="assets/images/video-thumbnail.jpg"
+                    preload="metadata"
+                    playsinline
+                    aria-label="Una Pirates rafting video"
+                >
+                    <source src="assets/videos/raftingvideo.mp4" type="video/mp4" />
+                    Vaš browser ne podržava video.
+                </video>
+
+                <!-- Play/Pause overlay -->
+                <div class="video-overlay" id="videoOverlay">
+                    <button class="video-play-btn" id="videoPlayBtn" aria-label="Pokreni video">
+                        <i class="fa-solid fa-play"></i>
+                    </button>
+                </div>
+
+                <!-- Controls bar -->
+                <div class="video-controls" id="videoControls">
+                    <button class="vc-btn" id="vcPlayPause" aria-label="Play/Pause">
+                        <i class="fa-solid fa-play" id="vcPlayIcon"></i>
+                    </button>
+                    <div class="vc-progress-wrap" id="vcProgressWrap" role="slider" aria-label="Napredak videa" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0">
+                        <div class="vc-progress-bar">
+                            <div class="vc-progress-fill" id="vcProgressFill"></div>
+                        </div>
+                    </div>
+                    <span class="vc-time" id="vcTime">0:00 / 0:00</span>
+                    <button class="vc-btn" id="vcMute" aria-label="Mute/Unmute">
+                        <i class="fa-solid fa-volume-high" id="vcVolumeIcon"></i>
+                    </button>
+                    <button class="vc-btn" id="vcFullscreen" aria-label="Fullscreen">
+                        <i class="fa-solid fa-expand"></i>
+                    </button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Lightbox video -->
+        <div class="video-lightbox" id="videoLightbox" aria-modal="true" role="dialog" aria-label="Video fullscreen" aria-hidden="true">
+            <div class="video-lightbox-overlay" id="videoLightboxOverlay"></div>
+            <button class="video-lightbox-close" id="videoLightboxClose" aria-label="Zatvori">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+            <div class="video-lightbox-content">
+                <video
+                    class="video-lightbox-player"
+                    id="videoLightboxPlayer"
+                    playsinline
+                    controls
+                    aria-label="Una Pirates rafting video fullscreen"
+                >
+                    <source src="assets/videos/raftingvideo.mp4" type="video/mp4" />
+                </video>
+            </div>
+        </div>
+    </section>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>

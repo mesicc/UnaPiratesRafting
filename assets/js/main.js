@@ -498,3 +498,137 @@ document.addEventListener('DOMContentLoaded', function () {
     render();
 
 })();
+
+// ============================================================
+// VIDEO SEKCIJA
+// ============================================================
+(function () {
+    const video         = document.getElementById('videoPlayer');
+    const videoWrap     = document.getElementById('videoWrap');
+    const overlay       = document.getElementById('videoOverlay');
+    const playBtn       = document.getElementById('videoPlayBtn');
+    const vcPlayPause   = document.getElementById('vcPlayPause');
+    const vcPlayIcon    = document.getElementById('vcPlayIcon');
+    const vcProgressFill = document.getElementById('vcProgressFill');
+    const vcProgressWrap = document.getElementById('vcProgressWrap');
+    const vcTime        = document.getElementById('vcTime');
+    const vcMute        = document.getElementById('vcMute');
+    const vcVolumeIcon  = document.getElementById('vcVolumeIcon');
+    const vcFullscreen  = document.getElementById('vcFullscreen');
+
+    // Lightbox
+    const lightbox      = document.getElementById('videoLightbox');
+    const lbOverlay     = document.getElementById('videoLightboxOverlay');
+    const lbClose       = document.getElementById('videoLightboxClose');
+    const lbVideo       = document.getElementById('videoLightboxPlayer');
+
+    if (!video) return;
+
+    // ---- Helpers ----
+    function formatTime(sec) {
+        const m = Math.floor(sec / 60);
+        const s = Math.floor(sec % 60).toString().padStart(2, '0');
+        return `${m}:${s}`;
+    }
+
+    function updatePlayIcon(playing) {
+        vcPlayIcon.className = playing ? 'fa-solid fa-pause' : 'fa-solid fa-play';
+        playBtn.querySelector('i').className = playing ? 'fa-solid fa-pause' : 'fa-solid fa-play';
+    }
+
+    // ---- Play / Pause ----
+    function togglePlay() {
+        if (video.paused) {
+            video.play();
+        } else {
+            video.pause();
+        }
+    }
+
+    video.addEventListener('play', () => {
+        overlay.classList.add('hidden');
+        videoWrap.classList.add('playing');
+        updatePlayIcon(true);
+    });
+
+    video.addEventListener('pause', () => {
+        overlay.classList.remove('hidden');
+        videoWrap.classList.remove('playing');
+        updatePlayIcon(false);
+    });
+
+    video.addEventListener('ended', () => {
+        overlay.classList.remove('hidden');
+        videoWrap.classList.remove('playing');
+        updatePlayIcon(false);
+        vcProgressFill.style.width = '0%';
+    });
+
+    // Klik na overlay (play btn na sredini)
+    overlay.addEventListener('click', togglePlay);
+    playBtn.addEventListener('click', e => { e.stopPropagation(); togglePlay(); });
+
+    // Klik na controls play/pause
+    vcPlayPause.addEventListener('click', e => { e.stopPropagation(); togglePlay(); });
+
+    // ---- Progress ----
+    video.addEventListener('timeupdate', () => {
+        if (!video.duration) return;
+        const pct = (video.currentTime / video.duration) * 100;
+        vcProgressFill.style.width = pct + '%';
+        vcTime.textContent = `${formatTime(video.currentTime)} / ${formatTime(video.duration)}`;
+        vcProgressWrap.setAttribute('aria-valuenow', Math.round(pct));
+    });
+
+    vcProgressWrap.addEventListener('click', e => {
+        e.stopPropagation();
+        const rect = vcProgressWrap.getBoundingClientRect();
+        const pct  = (e.clientX - rect.left) / rect.width;
+        video.currentTime = pct * video.duration;
+    });
+
+    // ---- Mute ----
+    vcMute.addEventListener('click', e => {
+        e.stopPropagation();
+        video.muted = !video.muted;
+        vcVolumeIcon.className = video.muted
+            ? 'fa-solid fa-volume-xmark'
+            : 'fa-solid fa-volume-high';
+    });
+
+    // ---- Fullscreen (lightbox) ----
+    function otvoriLightbox() {
+        const trenutnoVrijeme = video.currentTime;
+        const bjesePlay = !video.paused;
+
+        video.pause();
+
+        lbVideo.currentTime = trenutnoVrijeme;
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.style.overflow = 'hidden';
+
+        if (bjesePlay) lbVideo.play();
+    }
+
+    function zatvoriLightbox() {
+        const trenutnoVrijeme = lbVideo.currentTime;
+        lbVideo.pause();
+
+        video.currentTime = trenutnoVrijeme;
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    }
+
+    vcFullscreen.addEventListener('click', e => { e.stopPropagation(); otvoriLightbox(); });
+
+    lbClose.addEventListener('click', zatvoriLightbox);
+    lbOverlay.addEventListener('click', zatvoriLightbox);
+
+    document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') zatvoriLightbox();
+    });
+
+})();

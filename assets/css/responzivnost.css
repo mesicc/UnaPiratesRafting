@@ -276,3 +276,21 @@
     .google-score { font-size: 18px; }
     .google-zvjezdice { font-size: 15px; }
 }
+
+
+/* ============================================================
+   RESPONZIVNOST – video
+============================================================ */
+@media (max-width: 600px) {
+    .video-sekcija { padding: 48px 16px; }
+
+    .video-play-btn {
+        width: 56px;
+        height: 56px;
+        font-size: 18px;
+    }
+
+    .vc-time { display: none; }
+
+    .video-lightbox-content { width: 96vw; }
+}
