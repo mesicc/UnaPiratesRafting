@@ -512,3 +512,42 @@
         grid-template-columns: 1fr;
     }
 }
+
+/* =================================================================
+   SMJEŠTAJ – HERO RESPONZIVNOST
+================================================================= */
+
+@media (max-width: 920px) {
+  .sm-hero { height: 440px; }
+}
+
+@media (max-width: 600px) {
+  .sm-hero { height: 360px; }
+  .sm-hero-breadcrumb { font-size: 11px; letter-spacing: 1px; }
+  .sm-hero-tag { font-size: 11px; letter-spacing: 2px; }
+}
+
+/* =================================================================
+   SMJEŠTAJ – PAKETI RESPONZIVNOST
+================================================================= */
+
+@media (max-width: 768px) {
+  .sm-paketi { padding: 68px 20px; }
+  .sm-paketi-grid { grid-template-columns: repeat(3, 1fr); gap: 14px; }
+  .sm-paket-card { padding: 32px 18px 28px; }
+  .sm-paket-naziv { font-size: 16px; }
+  .sm-paket-opis { font-size: 14px; }
+}
+
+@media (max-width: 560px) {
+  .sm-paketi { padding: 56px 16px; }
+  .sm-paketi-grid {
+    grid-template-columns: 1fr;
+    max-width: 360px;
+    margin-left: auto;
+    margin-right: auto;
+    gap: 16px;
+  }
+  .sm-paketi-desc { font-size: 15px; margin-bottom: 40px; }
+  .sm-paketi-btn { font-size: 15px; padding: 14px 28px; }
+}

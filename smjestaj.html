@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="bs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Smještaj – Una Pirates | Sobe i Apartmani uz Rijeku Unu, Bihać</title>
+    <meta name="description" content="Odmorite se u udobnom smještaju Una Pirates direktno uz rijeku Unu u Nacionalnom parku Una, Bihać. Idealno za porodice, grupe i ljubitelje prirode. Rafting + smještaj + domaća hrana – sve na jednom mjestu." />
+    <meta name="keywords" content="smještaj Bihać, sobe uz Unu, apartmani NP Una, rafting i smještaj, Una Pirates smještaj, noćenje Bihać, Nacionalni park Una" />
+    <meta property="og:title" content="Smještaj – Una Pirates | Sobe uz Rijeku Unu" />
+    <meta property="og:description" content="Udoban smještaj direktno na obali rijeke Une. Rafting, smještaj i domaća hrana – nezaboravno iskustvo u srcu Nacionalnog parka Una." />
+    <meta property="og:type" content="website" />
+    <link rel="icon" type="image/webp" href="assets/images/logo.webp" />
+    <link rel="apple-touch-icon" href="assets/images/logo.webp" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/responzivnost.css" />
+  </head>
+  <body>
+
+    <!-- ========== NAVBAR ========== -->
+    <nav class="navbar" id="navbar">
+      <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/logo.webp" alt="Una Pirates Logo" />
+          <div class="nav-logo-text">
+            <span class="nav-logo-main">Rafting na Uni</span>
+            <span class="nav-logo-sub">BY UNA PIRATES</span>
+          </div>
+        </a>
+        <ul class="nav-links" id="navLinks">
+          <li><a href="index.html" class="nav-link">POČETNA</a></li>
+          <li><a href="o-nama.html" class="nav-link">O NAMA</a></li>
+          <li><a href="index.html#rute" class="nav-link">RUTE</a></li>
+          <li><a href="index.html#team-building" class="nav-link">TEAM BUILDING</a></li>
+          <li><a href="smjestaj.html" class="nav-link active">SMJEŠTAJ</a></li>
+        </ul>
+        <div class="nav-right">
+          <div class="lang-switcher" id="langSwitcher">
+            <button class="lang-btn" id="langBtn">
+              <i class="fa-solid fa-globe"></i>
+              <span id="currentLang">BS</span>
+              <i class="fa-solid fa-chevron-down"></i>
+            </button>
+            <div class="lang-dropdown" id="langDropdown">
+              <div class="lang-option active" data-lang="BS"><img src="https://flagcdn.com/w20/ba.png" alt="BA" /> Bosanski <i class="fa-solid fa-check"></i></div>
+              <div class="lang-option" data-lang="EN"><img src="https://flagcdn.com/w20/gb.png" alt="EN" /> English</div>
+              <div class="lang-option" data-lang="DE"><img src="https://flagcdn.com/w20/de.png" alt="DE" /> Deutsch</div>
+              <div class="lang-option" data-lang="AR"><img src="https://flagcdn.com/w20/sa.png" alt="AR" /> العربية</div>
+            </div>
+          </div>
+          <a href="index.html#rezervacija" class="btn-rezervisi">Rezerviši</a>
+          <button class="hamburger" id="hamburger" aria-label="Otvori meni"><span></span><span></span><span></span></button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- ========== MOBILE MENU ========== -->
+    <div class="mobile-menu" id="mobileMenu">
+      <div class="mobile-menu-header">
+        <a href="index.html" class="nav-logo">
+          <img src="assets/images/logo.webp" alt="Una Pirates Logo" />
+          <div class="nav-logo-text">
+            <span class="nav-logo-main">Rafting na Uni</span>
+            <span class="nav-logo-sub">BY UNA PIRATES</span>
+          </div>
+        </a>
+        <div class="mobile-menu-right">
+          <div class="lang-switcher" id="langSwitcherMobile">
+            <button class="lang-btn lang-btn-dark" id="langBtnMobile">
+              <i class="fa-solid fa-globe"></i>
+              <span id="currentLangMobile">BS</span>
+              <i class="fa-solid fa-chevron-down" id="langArrowMobile"></i>
+            </button>
+            <div class="lang-dropdown lang-dropdown-mobile" id="langDropdownMobile">
+              <div class="lang-option active" data-lang="BS"><img src="https://flagcdn.com/w20/ba.png" alt="BA" /> Bosanski <i class="fa-solid fa-check"></i></div>
+              <div class="lang-option" data-lang="EN"><img src="https://flagcdn.com/w20/gb.png" alt="EN" /> English</div>
+              <div class="lang-option" data-lang="DE"><img src="https://flagcdn.com/w20/de.png" alt="DE" /> Deutsch</div>
+              <div class="lang-option" data-lang="AR"><img src="https://flagcdn.com/w20/sa.png" alt="AR" /> العربية</div>
+            </div>
+          </div>
+          <button class="close-menu" id="closeMenu" aria-label="Zatvori meni"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html" class="mobile-nav-link">Početna</a></li>
+        <li><a href="o-nama.html" class="mobile-nav-link">O nama</a></li>
+        <li><a href="index.html#rute" class="mobile-nav-link">Rute</a></li>
+        <li><a href="index.html#team-building" class="mobile-nav-link">Team Building</a></li>
+        <li><a href="smjestaj.html" class="mobile-nav-link">Smještaj</a></li>
+      </ul>
+      <a href="index.html#rezervacija" class="btn-rezervisi btn-rezervisi-full">Rezerviši</a>
+    </div>
+    <div class="menu-overlay" id="menuOverlay"></div>
+
+
+    <!-- ========== SMJEŠTAJ HERO ========== -->
+    <section class="sm-hero">
+        <div class="sm-hero-overlay"></div>
+        <div class="sm-hero-content">
+            <nav class="sm-hero-breadcrumb" aria-label="Breadcrumb">
+            <a href="index.html">POČETNA</a>
+            <span class="sm-hero-breadcrumb-sep">›</span>
+            <span>SMJEŠTAJ</span>
+            </nav>
+            <span class="sm-hero-tag">SMJEŠTAJ / ACCOMMODATION</span>
+            <h1 class="sm-hero-title">Otkrijte što vas čeka u novim i nezaboravnim avanturama!</h1>
+        </div>
+    </section>
+
+    <!-- ========== INTRO + GALERIJA SMJEŠTAJA ========== -->
+    <section class="sm-intro">
+    <div class="sm-intro-wrap">
+        <span class="sm-intro-tag">TREBATE SMJEŠTAJ?</span>
+        <h2 class="sm-intro-title">Pogledajte naš smještaj</h2>
+        <p class="sm-intro-desc">
+        Pogledajte neka od naših mjesta gdje možete odsjesti. Ako tražite idealno mjesto za
+        bijeg od gradske vreve, naš smještaj će vas oduševiti. Smješten na obali prekrasne
+        rijeke, pruža vam jedinstvenu priliku da se opustite u prirodnom okruženju.
+        </p>
+    </div>
+    </section>
+
+    <!-- GALERIJA SMJEŠTAJ -->
+    <section class="galerija" id="galerija" aria-labelledby="galerija-naslov">
+        <div class="galerija-container"> 
+            <!-- Grid -->
+            <div class="galerija-grid" id="galerijaGrid" role="list">
+                <figure class="galerija-item" role="listitem" data-index="0">
+                    <img src="assets/images/smjestaj/ripac-dvoriste.jpg" alt="Dvorište kuće u Ripču" loading="lazy" width="400" height="400" />
+                </figure>
+                <figure class="galerija-item" role="listitem" data-index="1">
+                    <img src="assets/images/smjestaj/ripac-ulaz.jpg" alt="Ulaz u dvorište" loading="lazy" width="400" height="400" />
+                </figure>
+                <figure class="galerija-item" role="listitem" data-index="2">
+                    <img src="assets/images/smjestaj/ripac-boravak.jpg" alt="Dnevnni boravak u kući u Ripču" loading="lazy" width="400" height="400" />
+                </figure>
+                <figure class="galerija-item" role="listitem" data-index="3">
+                    <img src="assets/images/smjestaj/ripac-dnevna.jpg" alt="Dnevna soba sa više kreveta" loading="lazy" width="400" height="400" />
+                </figure>
+                <figure class="galerija-item galerija-item--hidden" role="listitem" data-index="5">
+                    <img src="assets/images/smjestaj/ripac-spavace-sobe.jpg" alt="Spavaće sobe sa više kreveta" loading="lazy" width="400" height="400" />
+                </figure>
+                <figure class="galerija-item galerija-item--hidden" role="listitem" data-index="6">
+                    <img src="assets/images/smjestaj/ripac-spavaca.jpg" alt="Spavaća soba sa bračnim krevetom" loading="lazy" width="400" height="400" />
+                </figure>
+                <figure class="galerija-item galerija-item--hidden" role="listitem" data-index="7">
+                    <img src="assets/images/smjestaj/ripac-spavaca2.jpg" alt="Spavaća soba sa bračnim krevetom" loading="lazy" width="400" height="400" />
+                </figure>
+                <figure class="galerija-item galerija-item--hidden" role="listitem" data-index="8">
+                    <img src="assets/images/smjestaj/ripac-kupatilo.jpg" alt="Kupatilo u kući u Ripču" loading="lazy" width="400" height="400" />
+                </figure>
+                <figure class="galerija-item galerija-item--hidden" role="listitem" data-index="9">
+                    <img src="assets/images/smjestaj/ripac-kupatilo2.jpg" alt="Kupatilo u kući u Ripču" loading="lazy" width="400" height="400" />
+                </figure>
+                <figure class="galerija-item galerija-item--hidden" role="listitem" data-index="10">
+                    <img src="assets/images/smjestaj/ripac-vani.jpg" alt="Terasa u kući u Ripču" loading="lazy" width="400" height="400" />
+                </figure>
+            </div>
+
+            <!-- Dugmad -->
+            <div class="galerija-actions">
+                <button class="btn-vidi-vise" id="btnVidiVise" aria-expanded="false">
+                    Vidi više
+                </button>
+                <button class="btn-vidi-manje hidden" id="btnVidiManje">
+                    Vidi manje
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== LIGHTBOX ========== -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pregled slike" aria-hidden="true">
+        <div class="lightbox-overlay" id="lightboxOverlay"></div>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Zatvori pregled">
+            <i class="fa-solid fa-xmark"></i>
+        </button>
+        <button class="lightbox-prev" id="lightboxPrev" aria-label="Prethodna slika">
+            <i class="fa-solid fa-chevron-left"></i>
+        </button>
+        <button class="lightbox-next" id="lightboxNext" aria-label="Sljedeća slika">
+            <i class="fa-solid fa-chevron-right"></i>
+        </button>
+        <div class="lightbox-content">
+            <img src="" alt="" class="lightbox-img" id="lightboxImg" />
+            <p class="lightbox-counter" id="lightboxCounter">1 / 11</p>
+        </div>
+    </div>
+
+
+    <!-- ========== PAKETI SEKCIJA ========== -->
+    <section class="sm-paketi">
+        <div class="sm-paketi-wrap">
+            <div class="sm-paketi-header">
+                <span class="sm-paketi-tag">KOMPLETNO ISKUSTVO</span>
+                <h2 class="sm-paketi-title">Rafting, smještaj, hrana</h2>
+                <p class="sm-paketi-desc">
+                    Nudimo posebne pakete zajedno sa raftingom i hranom da biste doživjeli potpuno
+                    iskustvo avanture i nezaboravno iskustvo na rijeci Uni!
+                </p>
+            </div>
+            <div class="sm-paketi-grid">
+                <div class="sm-paket-card">
+                    <div class="sm-paket-ikona">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <h3 class="sm-paket-naziv">Rafting avantura</h3>
+                    <p class="sm-paket-opis">
+                    Adrenalinski spust rijekom Unom uz stručne vodiče i kompletnu opremu.
+                    </p>
+                </div>
+
+                <div class="sm-paket-card">
+                    <div class="sm-paket-ikona">
+                        <i class="fa-solid fa-house"></i>
+                    </div>
+                    <h3 class="sm-paket-naziv">Smještaj uz rijeku</h3>
+                    <p class="sm-paket-opis">
+                    Udobne sobe i apartmani smješteni direktno na obali rijeke Une.
+                    </p>
+                </div>
+
+                <div class="sm-paket-card">
+                    <div class="sm-paket-ikona">
+                        <i class="fa-solid fa-utensils"></i>
+                        </div>
+                        <h3 class="sm-paket-naziv">Domaća hrana</h3>
+                        <p class="sm-paket-opis">
+                        Tradicionalna bosanska kuhinja sa svježim, domaćim namirnicama.
+                        </p>
+                </div>
+            </div>
+            <div class="sm-paketi-cta">
+                <a href="tel:+38761782339" class="sm-paketi-btn">
+                    <i class="fa-solid fa-phone"></i> Kontaktirajte nas
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========== CTA ========== -->
+    <section class="cta" aria-labelledby="cta-naslov">
+      <div class="cta-container">
+        <h2 class="cta-title" id="cta-naslov">Spremni za Unu?</h2>
+        <p class="cta-desc">Rezervišite termin online ili nas pozovite za dogovor. Termini se brzo pune!</p>
+        <div class="cta-btns">
+          <a href="index.html#rezervacija" class="btn-cta-primary">Rezerviraj Svoj Termin</a>
+          <a href="https://wa.me/38761782339?text=Zdravo%2C%20zanima%20me%20rezervacija%20raftinga!"
+             target="_blank" rel="noopener noreferrer" class="btn-cta-outline">
+            <i class="fa-brands fa-whatsapp"></i> Ili nas pozovite na WhatsApp
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer" role="contentinfo">
+      <div class="footer-main">
+        <div class="footer-container">
+          <div class="footer-col footer-col--brand">
+            <a href="index.html" class="footer-logo" aria-label="Una Pirates – početna stranica">
+              <img src="assets/images/logo.webp" alt="Una Pirates logo" width="52" height="52" />
+              <div class="footer-logo-text">
+                <span class="footer-logo-main">Rafting na Uni</span>
+                <span class="footer-logo-sub">BY UNA PIRATES</span>
+              </div>
+            </a>
+            <div class="footer-social" aria-label="Socijalne mreže">
+              <a href="https://www.instagram.com/una_pirates" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+              <a href="https://www.tiktok.com/@una.pirates" target="_blank" rel="noopener noreferrer" class="footer-social-btn" aria-label="TikTok"><i class="fa-brands fa-tiktok"></i></a>
+            </div>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title">BRZI LINKOVI</h3>
+            <nav aria-label="Footer navigacija">
+              <ul class="footer-links">
+                <li><a href="index.html" class="footer-link">Početna</a></li>
+                <li><a href="o-nama.html" class="footer-link">O nama</a></li>
+                <li><a href="index.html#rute" class="footer-link">Rute</a></li>
+                <li><a href="index.html#team-building" class="footer-link">Team Building</a></li>
+                <li><a href="index.html#rezervacija" class="footer-link">Rezerviši</a></li>
+                <li><a href="admin/login.html" class="footer-link">Admin</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer-col">
+            <h3 class="footer-col-title">KONTAKT &amp; LOKACIJA</h3>
+            <ul class="footer-kontakt">
+              <li class="footer-kontakt-item">
+                <i class="fa-solid fa-location-dot footer-kontakt-icon"></i>
+                <span>NP Una, Bihać, Bosnia &amp; Herzegovina</span>
+              </li>
+              <li class="footer-kontakt-item">
+                <i class="fa-solid fa-phone footer-kontakt-icon"></i>
+                <a href="tel:+38761782339" class="footer-kontakt-link">+387 61 782 339</a>
+              </li>
+              <li class="footer-kontakt-item">
+                <i class="fa-solid fa-envelope footer-kontakt-icon"></i>
+                <a href="mailto:info@unapirates.com" class="footer-kontakt-link">info@unapirates.com</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <div class="footer-bottom-container">
+          <p class="footer-copyright">© 2026 UnaPirates. Sva prava pridržana.</p>
+          <p class="footer-credit">Web development by <a href="#" class="footer-credit-link">Kemal Mešić</a></p>
+        </div>
+      </div>
+    </footer>
+
+    <a href="https://wa.me/38761782339?text=Zdravo%2C%20zanima%20me%20smjestaj%20i%20rafting!"
+       target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+      <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
