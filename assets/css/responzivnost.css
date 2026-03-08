@@ -324,3 +324,40 @@
         padding: 0 18px 16px;
     }
 }
+
+
+/* ---- LOKACIJA I PODACI ---- */
+@media (max-width: 860px) {
+    .lokacija-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .lokacija-mapa {
+        height: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .lokacija { padding: 48px 16px; }
+
+    .lokacija-info {
+        padding: 24px 20px;
+    }
+
+    .lokacija-naziv {
+        font-size: 22px;
+        margin-bottom: 20px;
+    }
+
+    .lokacija-mapa {
+        height: 250px;
+    }
+
+    .lokacija-ikona-wrap {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        font-size: 15px;
+    }
+}
