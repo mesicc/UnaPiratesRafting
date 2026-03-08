@@ -236,6 +236,19 @@
     }
 }
 
+/* ---- Galerija social ---- */
+@media (max-width: 480px) {
+    .galerija-social {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-galerija-social {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
 /* ============================================================
    RESPONZIVNOST – recenzije
 ============================================================ */
@@ -359,5 +372,65 @@
         height: 36px;
         min-width: 36px;
         font-size: 15px;
+    }
+}
+
+
+/* ---- CTA ---- */
+@media (max-width: 600px) {
+    .cta { padding: 60px 16px; }
+
+    .cta-btns {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-cta-primary,
+    .btn-cta-outline {
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+/* ---- FOOTER ---- */
+@media (max-width: 920px) {
+    .footer-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 36px;
+    }
+
+    .footer-col--brand {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 16px;
+        padding-bottom: 24px;
+        border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+}
+
+@media (max-width: 560px) {
+    .footer-main { padding: 48px 16px 36px; }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+
+    .footer-col--brand {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .footer-bottom-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+        text-align: center;
+        align-items: center;
     }
 }

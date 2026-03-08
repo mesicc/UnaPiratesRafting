@@ -1250,6 +1250,46 @@ ul { list-style: none; }
     color: var(--orange);
 }
 
+/* ---- Galerija social dugmad ---- */
+.galerija-social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    margin-top: 16px;
+    margin-bottom: 29px;
+    flex-wrap: wrap;
+}
+
+.btn-galerija-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 28px;
+    border-radius: 50px;
+    font-family: var(--font);
+    font-size: 14px;
+    font-weight: 700;
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+.btn-galerija-social:hover {
+    transform: translateY(-2px);
+    opacity: 0.88;
+}
+
+.btn-instagram {
+    background: linear-gradient(135deg, #f09433, #e6683c, #dc2743, #cc2366, #bc1888);
+    color: #fff;
+}
+
+.btn-tiktok {
+    background: #010101;
+    color: #fff;
+}
+
+.btn-tiktok .fa-tiktok { color: #fff; }
+
 /* Tag */
 .galerija-tag {
     text-align: center;
@@ -2099,4 +2139,263 @@ ul { list-style: none; }
 }
 
 
+/* ============================================================
+   CTA SEKCIJA
+============================================================ */
+.cta {
+    background-color: #0e2018;
+    padding: 80px 24px;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
 
+.cta-container {
+    max-width: 780px;
+    margin: 0 auto;
+}
+
+.cta-title {
+    font-size: clamp(32px, 5vw, 56px);
+    font-weight: 900;
+    color: var(--white);
+    margin-bottom: 16px;
+    line-height: 1.1;
+}
+
+.cta-desc {
+    font-size: clamp(15px, 2vw, 18px);
+    color: rgba(255,255,255,0.7);
+    margin-bottom: 36px;
+    line-height: 1.6;
+}
+
+.cta-btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.btn-cta-primary {
+    background: var(--orange);
+    color: #fff;
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 15px 32px;
+    border-radius: 50px;
+    transition: background 0.2s, transform 0.15s;
+    display: inline-block;
+}
+
+.btn-cta-primary:hover {
+    background: var(--orange-dark);
+    transform: translateY(-2px);
+}
+
+.btn-cta-outline {
+    background: transparent;
+    color: var(--white);
+    font-family: var(--font);
+    font-size: 15px;
+    font-weight: 700;
+    padding: 14px 28px;
+    border-radius: 50px;
+    border: 2px solid rgba(255,255,255,0.5);
+    transition: border-color 0.2s, background 0.2s, transform 0.15s;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.btn-cta-outline:hover {
+    border-color: var(--white);
+    background: rgba(255,255,255,0.08);
+    transform: translateY(-2px);
+}
+
+.btn-cta-outline .fa-whatsapp {
+    font-size: 18px;
+    color: #25D366;
+}
+
+/* ============================================================
+   FOOTER
+============================================================ */
+.footer {
+    background-color: #0e2018;
+}
+
+/* ---- Footer main ---- */
+.footer-main {
+    padding: 64px 24px 48px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1.4fr 1fr 1fr;
+    gap: 48px;
+}
+
+/* ---- Kolona brand ---- */
+.footer-col--brand {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-logo img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+.footer-logo-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-logo-main {
+    font-size: 17px;
+    font-weight: 800;
+    color: var(--white);
+    line-height: 1.2;
+}
+
+.footer-logo-sub {
+    font-size: 10px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.45);
+    letter-spacing: 1.5px;
+}
+
+/* Socijalne mreže */
+.footer-social {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-social-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 10px;
+    background: rgba(255,255,255,0.08);
+    color: rgba(255,255,255,0.75);
+    font-size: 17px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s, color 0.2s;
+}
+
+.footer-social-btn:hover {
+    background: var(--orange);
+    color: #fff;
+}
+
+/* ---- Kolona naslovi ---- */
+.footer-col-title {
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+/* ---- Linkovi ---- */
+.footer-links {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-link {
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    transition: color 0.2s;
+}
+
+.footer-link:hover {
+    color: var(--white);
+}
+
+/* ---- Kontakt ---- */
+.footer-kontakt {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.footer-kontakt-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.6);
+    line-height: 1.5;
+}
+
+.footer-kontakt-icon {
+    color: var(--orange);
+    font-size: 15px;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.footer-kontakt-link {
+    color: rgba(255,255,255,0.6);
+    transition: color 0.2s;
+}
+
+.footer-kontakt-link:hover {
+    color: var(--white);
+}
+
+/* ---- Footer bottom ---- */
+.footer-bottom {
+    padding: 20px 24px;
+}
+
+.footer-bottom-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.footer-copyright {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+}
+
+.footer-credit {
+    font-size: 13px;
+    color: rgba(255,255,255,0.35);
+}
+
+.footer-credit-link {
+    color: var(--orange);
+    font-weight: 600;
+    transition: opacity 0.2s;
+}
+
+.footer-credit-link:hover { opacity: 0.75; }
