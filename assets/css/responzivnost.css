@@ -609,3 +609,77 @@
 		text-align: center;
 	}
 }
+
+
+
+/* =================================================================
+   TEAM BUILDING – RESPONZIVNOST
+   Dodaj na kraj responzivnost.css
+================================================================= */
+
+/* ---- Hero ---- */
+@media (max-width: 920px) {
+	.tb-hero { height: 400px; }
+}
+
+@media (max-width: 768px) {
+	.tb-hero { height: 320px; }
+	.tb-hero-desc { display: none; }
+	.tb-intro { padding: 52px 20px 0; }
+}
+
+@media (max-width: 480px) {
+	.tb-hero { height: 260px; }
+	.tb-intro { padding: 40px 16px 0; }
+	.tb-intro-desc { font-size: 15px; }
+}
+
+/* ---- Foto grid ---- */
+@media (max-width: 768px) {
+	.tb-foto { padding: 36px 16px 0; }
+	.tb-foto-wrap {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 400px) {
+	.tb-foto-wrap {
+		grid-template-columns: 1fr;
+	}
+}
+
+/* ---- Aktivnosti ---- */
+@media (max-width: 900px) {
+	.tb-aktivnosti-grid {
+		grid-template-columns: repeat(5, 1fr);
+	}
+}
+
+@media (max-width: 600px) {
+	.tb-aktivnosti { padding: 52px 16px 40px; }
+	.tb-aktivnosti-grid {
+		grid-template-columns: repeat(3, 1fr);
+		gap: 10px;
+	}
+}
+
+@media (max-width: 380px) {
+	.tb-aktivnosti-grid {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+/* ---- Benefiti ---- */
+@media (max-width: 768px) {
+	.tb-benefiti-wrap {
+		grid-template-columns: 1fr;
+		max-width: 480px;
+	}
+	.tb-benefiti { padding: 0 20px 56px; }
+}
+
+@media (max-width: 480px) {
+	.tb-benefiti { padding: 0 16px 48px; }
+	.tb-cta { padding: 0 16px 60px; }
+	.btn-tb-cta { width: 100%; justify-content: center; }
+}
