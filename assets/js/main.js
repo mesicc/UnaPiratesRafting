@@ -93,6 +93,61 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+/* =================================================================
+   RUTE SLIDER
+   Dodaj unutar DOMContentLoaded u main.js
+================================================================= */
+(function () {
+	'use strict';
+
+	var sliders = document.querySelectorAll('.ruta-slider');
+
+	sliders.forEach(function (slider) {
+		var slides  = slider.querySelector('.ruta-slides');
+		var dots    = slider.querySelectorAll('.ruta-dot');
+		var prev    = slider.querySelector('.ruta-arrow--prev');
+		var next    = slider.querySelector('.ruta-arrow--next');
+		var total   = dots.length;
+		var aktivan = 0;
+
+		function idina(idx) {
+			aktivan = ((idx % total) + total) % total;
+			slides.style.transform = 'translateX(-' + (aktivan * 100) + '%)';
+			dots.forEach(function (d, i) {
+				d.classList.toggle('active', i === aktivan);
+			});
+		}
+
+		prev.addEventListener('click', function (e) {
+			e.stopPropagation();
+			idina(aktivan - 1);
+		});
+
+		next.addEventListener('click', function (e) {
+			e.stopPropagation();
+			idina(aktivan + 1);
+		});
+
+		dots.forEach(function (dot, i) {
+			dot.addEventListener('click', function (e) {
+				e.stopPropagation();
+				idina(i);
+			});
+		});
+
+		/* Touch / swipe */
+		var touchX = 0;
+		slider.addEventListener('touchstart', function (e) {
+			touchX = e.changedTouches[0].screenX;
+		}, { passive: true });
+		slider.addEventListener('touchend', function (e) {
+			var d = touchX - e.changedTouches[0].screenX;
+			if (Math.abs(d) > 40) d > 0 ? idina(aktivan + 1) : idina(aktivan - 1);
+		}, { passive: true });
+	});
+
+})();
+
 // --- Quiz logika ---
 (function () {
     const odgovori = {};

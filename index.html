@@ -176,7 +176,6 @@
     <section class="rute" id="rute">
         <div class="rute-container">
 
-            <!-- Header -->
             <div class="section-header">
                 <span class="section-tag">NAŠE RUTE</span>
                 <h2 class="section-title">Rute i Doživljaji</h2>
@@ -186,13 +185,30 @@
                 </p>
             </div>
 
-            <!-- Kartice -->
             <div class="rute-grid">
 
                 <!-- Kartica 1 – R1 -->
                 <div class="ruta-card">
                     <div class="ruta-img-wrap">
-                        <img src="assets/images/ruta-r1.jpg" alt="Nacionalni park Una" class="ruta-img" />
+                        <!-- Slider -->
+                        <div class="ruta-slider" data-active="0">
+                            <div class="ruta-slides">
+                                <img src="assets/images/rute/r1/stbackibuk/strbackibuk1.jpeg"   alt="Štrbački buk ekipa – slika 1" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/stbackibuk/strbackibuk5.jpeg" alt="Štbački buk – slika 2" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/loskun/loskun2.jpeg" alt="Loskun – slika 3" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/troslap/troslap1.jpeg" alt="Troslap – slika 4" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/pecina/pecina2.jpeg" alt="Pećina – slika 5" class="ruta-slide" />
+                            </div>
+                            <button class="ruta-arrow ruta-arrow--prev" aria-label="Prethodna slika">&#8249;</button>
+                            <button class="ruta-arrow ruta-arrow--next" aria-label="Sljedeća slika">&#8250;</button>
+                            <div class="ruta-dots">
+                                <span class="ruta-dot active"></span>
+                                <span class="ruta-dot"></span>
+                                <span class="ruta-dot"></span>
+                                <span class="ruta-dot"></span>
+                                <span class="ruta-dot"></span>
+                            </div>
+                        </div>
                         <span class="ruta-badge badge-orange">R1</span>
                         <span class="ruta-price">60€</span>
                     </div>
@@ -213,7 +229,24 @@
                 <!-- Kartica 2 – R2 -->
                 <div class="ruta-card">
                     <div class="ruta-img-wrap">
-                        <img src="assets/images/ruta-r2.jpg" alt="Paradise / Kostela" class="ruta-img" />
+                        <div class="ruta-slider" data-active="0">
+                            <div class="ruta-slides">
+                                <img src="assets/images/ruta-r2.jpg"   alt="Paradise / Kostela – slika 1" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/loskun/loskun3.jpeg" alt="Paradise / Kostela – slika 2" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/loskun/loskun1.jpeg" alt="Paradise / Kostela – slika 3" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/stbackibuk/strbackibuk5.jpeg" alt="Paradise / Kostela – slika 4" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/stbackibuk/strbackibuk1.jpeg" alt="Paradise / Kostela – slika 5" class="ruta-slide" />
+                            </div>
+                            <button class="ruta-arrow ruta-arrow--prev" aria-label="Prethodna slika">&#8249;</button>
+                            <button class="ruta-arrow ruta-arrow--next" aria-label="Sljedeća slika">&#8250;</button>
+                            <div class="ruta-dots">
+                                <span class="ruta-dot active"></span>
+                                <span class="ruta-dot"></span>
+                                <span class="ruta-dot"></span>
+                                <span class="ruta-dot"></span>
+                                <span class="ruta-dot"></span>
+                            </div>
+                        </div>
                         <span class="ruta-badge badge-orange">R2</span>
                         <span class="ruta-price">40€</span>
                     </div>
@@ -234,7 +267,24 @@
                 <!-- Kartica 3 – Kayak -->
                 <div class="ruta-card">
                     <div class="ruta-img-wrap">
-                        <img src="assets/images/ruta-kayak.jpg" alt="Kayak Safari" class="ruta-img" />
+                        <div class="ruta-slider" data-active="0">
+                            <div class="ruta-slides">
+                                <img src="assets/images/ruta-kayak.jpg"   alt="Kayak Safari – slika 1" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/stbackibuk/strbackibuk5.jpeg" alt="Kayak Safari – slika 2" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/stbackibuk/strbackibuk2.jpeg" alt="Kayak Safari – slika 3" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/stbackibuk/strbackibuk3.jpeg" alt="Kayak Safari – slika 4" class="ruta-slide" />
+                                <img src="assets/images/rute/r1/stbackibuk/strbackibuk1.jpeg" alt="Kayak Safari – slika 5" class="ruta-slide" />
+                            </div>
+                            <button class="ruta-arrow ruta-arrow--prev" aria-label="Prethodna slika">&#8249;</button>
+                            <button class="ruta-arrow ruta-arrow--next" aria-label="Sljedeća slika">&#8250;</button>
+                            <div class="ruta-dots">
+                                <span class="ruta-dot active"></span>
+                                <span class="ruta-dot"></span>
+                                <span class="ruta-dot"></span>
+                                <span class="ruta-dot"></span>
+                                <span class="ruta-dot"></span>
+                            </div>
+                        </div>
                         <span class="ruta-badge badge-orange">Kayak</span>
                         <span class="ruta-price">40€</span>
                     </div>
@@ -253,10 +303,6 @@
             </div>
         </div>
     </section>
-
-    <!-------------------------Istraži Rijeku Una-------------------------------->
-    <!-------------------------Istraži Rijeku Una-----KARTA---------------------->
-    <!-------------------------Istraži Rijeku Una-------------------------------->
 
     <!-- ========== QUIZ – Koji si tip raftera? ========== -->
     <section class="quiz-section" id="quiz" aria-labelledby="quiz-naslov">
@@ -433,7 +479,7 @@
                     <div class="usluga-body">
                         <h3 class="usluga-naziv">SMJEŠTAJ</h3>
                         <p class="usluga-opis">Pogledajte neka od naših mjesta gdje možete odsjesti!</p>
-                        <a href="#smjestaj" class="btn-usluga" aria-label="Saznaj više o smještaju">
+                        <a href="smjestaj.html" class="btn-usluga" aria-label="Saznaj više o smještaju">
                             Saznaj više <span class="btn-arrow">→</span>
                         </a>
                     </div>
