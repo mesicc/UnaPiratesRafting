@@ -2,6 +2,7 @@
    style.css – Una Pirates
 ============================================================ */
 
+
 /* RESET & BASE */
 *, *::before, *::after {
     margin: 0;
@@ -18,13 +19,14 @@
     --text-light:  rgba(255,255,255,0.85);
     --font:        'Montserrat', sans-serif;
 }
-
-html { scroll-behavior: smooth; }
+html {
+    scroll-behavior: smooth;
+}
 
 body {
     font-family: var(--font);
     color: var(--white);
-    overflow-x: hidden;
+    overflow-x: clip; /* clip umjesto hidden – ne kvari sticky */
 }
 
 a { text-decoration: none; color: inherit; }

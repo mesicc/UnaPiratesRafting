@@ -683,3 +683,124 @@
 	.tb-cta { padding: 0 16px 60px; }
 	.btn-tb-cta { width: 100%; justify-content: center; }
 }
+
+
+/* ===================================================================================================================
+                                                RUTE
+                                                RUTE
+                                                RUTE
+===================================================================================================================== */
+/* =================================================================
+   RUTA DETALJ – RESPONZIVNOST
+   Dodaj na kraj responzivnost.css
+================================================================= */
+
+/* ---- Tablet (max 900px) – sidebar sužen ---- */
+@media (max-width: 900px) {
+	.r-hero { height: 400px; }
+
+	.r-main { padding: 40px 20px 64px; }
+
+	.r-main-container {
+		grid-template-columns: 1fr 260px;
+		gap: 24px;
+	}
+
+	.r-booking-iznos { font-size: 34px; }
+	.r-booking-box { padding: 22px 18px; }
+}
+
+/* ---- Tablet mali / mobitel (max 768px) – jednokolonski ---- */
+@media (max-width: 768px) {
+	.r-hero {
+		height: auto;
+		min-height: 320px;
+		padding: 80px 0 32px;
+	}
+
+	.r-hero-content { padding: 0 20px; }
+	.r-hero-title { font-size: 28px; }
+
+	.r-hero-meta {
+		flex-direction: column;
+		gap: 6px;
+	}
+
+	.r-main { padding: 32px 16px 56px; }
+
+	/* Jednokolonski layout */
+	.r-main-container {
+		grid-template-columns: 1fr !important;
+		gap: 32px;
+	}
+
+	/* Content ide gore, sidebar ide dolje */
+	.r-content { order: 1; }
+
+	.r-sidebar {
+		order: 2;
+		position: static !important;
+		top: auto !important;
+		width: 100%;
+	}
+
+	.r-booking-box { padding: 24px 20px; }
+	.r-booking-iznos { font-size: 36px; }
+
+	.btn-r-rezerviraj,
+	.btn-r-whatsapp { width: 100%; }
+
+	.r-sekcija-naslov { font-size: 19px; }
+	.r-sekcija p { font-size: 15px; }
+
+	/* Info grid – ostaje 2 kolone na tabletu, lomi se tek na manjem */
+	.r-info-grid {
+		grid-template-columns: 1fr 1fr;
+		gap: 12px;
+	}
+}
+
+/* ---- Mobitel (max 480px) – info grid u jednu kolonu ---- */
+@media (max-width: 480px) {
+	.r-hero { min-height: 280px; }
+	.r-hero-content { padding: 0 16px; }
+	.r-hero-title { font-size: 24px; }
+
+	.r-main { padding: 28px 14px 48px; }
+
+	.r-info-grid {
+		grid-template-columns: 1fr !important;
+		gap: 10px;
+	}
+}
+
+/* ---- Mali mobitel (max 400px) ---- */
+@media (max-width: 400px) {
+	.r-hero-title { font-size: 21px; }
+	.r-main { padding: 24px 12px 44px; }
+}
+
+/* ========== EXTRA SEKCIJA – RESPONZIVNOST ========== */
+
+@media (max-width: 768px) {
+	.r-extra {
+		padding: 0 16px 56px;
+	}
+
+	.r-extra-container {
+		grid-template-columns: 1fr !important;
+		gap: 16px;
+	}
+
+	.r-extra-card {
+		padding: 28px 24px;
+	}
+
+	.r-extra-naslov { font-size: 18px; }
+	.r-extra-tekst { font-size: 14px; }
+}
+
+@media (max-width: 400px) {
+	.r-extra { padding: 0 14px 48px; }
+	.r-extra-card { padding: 24px 18px; }
+}
