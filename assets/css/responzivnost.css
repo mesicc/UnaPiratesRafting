@@ -804,3 +804,70 @@
 	.r-extra { padding: 0 14px 48px; }
 	.r-extra-card { padding: 24px 18px; }
 }
+
+/* ========== ISTRAŽI RUTU – RESPONZIVNOST ========== */
+
+/* ---- Tablet (max 768px) – karta od ivice do ivice ---- */
+@media (max-width: 768px) {
+	.r-istrazi {
+		padding: 0 0 56px;
+	}
+
+	.r-istrazi-naslov {
+		font-size: 22px;
+		padding: 0 16px;
+	}
+
+	.r-istrazi-opis {
+		padding: 0 16px;
+	}
+
+	.r-mapa-wrap {
+		border-radius: 0;
+	}
+
+	.r-tacka i { font-size: 20px; }
+
+	.r-tacka span {
+		font-size: 8px;
+		padding: 2px 7px;
+	}
+
+	.r-mapa-hint {
+		font-size: 11px;
+		padding: 6px 12px;
+	}
+
+	/* Modal – dolazi odozdo */
+	.r-modal-overlay {
+		padding: 12px;
+		align-items: flex-end;
+	}
+
+	.r-modal {
+		max-width: 100%;
+		border-radius: 16px 16px 12px 12px;
+		max-height: 85vh;
+	}
+
+	.r-modal-info { padding: 16px 18px 20px; }
+	.r-modal-naslov { font-size: 18px; }
+	.r-modal-tekst  { font-size: 13px; }
+}
+
+/* ---- Mobitel (max 480px) – još manji tekst ---- */
+@media (max-width: 480px) {
+	.r-tacka i { font-size: 16px; }
+
+	.r-tacka span {
+		font-size: 6.5px;
+		padding: 1px 5px;
+	}
+
+	.r-mapa-hint {
+		font-size: 10px;
+		padding: 5px 10px;
+		top: 8px;
+		left: 8px;
+	}
+}
