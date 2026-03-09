@@ -826,16 +826,24 @@
 		border-radius: 0;
 	}
 
-	.r-tacka i { font-size: 20px; }
-
+	/* Sakrij nazive na mapi – samo pinovi */
 	.r-tacka span {
-		font-size: 8px;
-		padding: 2px 7px;
+		display: none;
 	}
+
+	.r-tacka i { font-size: 22px; }
 
 	.r-mapa-hint {
 		font-size: 11px;
 		padding: 6px 12px;
+	}
+
+	/* Lista tačaka ispod mape */
+	.r-tacka-lista {
+		display: flex;
+		flex-direction: column;
+		gap: 6px;
+		padding: 12px 16px 0;
 	}
 
 	/* Modal – dolazi odozdo */
@@ -855,14 +863,9 @@
 	.r-modal-tekst  { font-size: 13px; }
 }
 
-/* ---- Mobitel (max 480px) – još manji tekst ---- */
+/* ---- Mobitel (max 480px) ---- */
 @media (max-width: 480px) {
-	.r-tacka i { font-size: 16px; }
-
-	.r-tacka span {
-		font-size: 6.5px;
-		padding: 1px 5px;
-	}
+	.r-tacka i { font-size: 18px; }
 
 	.r-mapa-hint {
 		font-size: 10px;

@@ -216,96 +216,103 @@
     </section>
 
     <!-- ========== ISTRAŽI OVU RUTU ========== -->
-    <section class="r-istrazi">
-        <div class="r-istrazi-container">
-            <h2 class="r-istrazi-naslov">Istraži ovu rutu</h2>
-            <p class="r-istrazi-opis">Klikni na tačke i otkrij šta te čeka na ovoj avanturi.</p>
+<section class="r-istrazi">
+	<div class="r-istrazi-container">
+		<h2 class="r-istrazi-naslov">Istraži ovu rutu</h2>
+		<p class="r-istrazi-opis">Klikni na tačke i otkrij šta te čeka na ovoj avanturi.</p>
 
-            <div class="r-mapa-wrap">
-                <img
-                    src="../../../assets/images/rute/r1/prikazr1.jpg"
-                    alt="Prikaz rute R1"
-                    class="r-mapa-slika"
-                    draggable="false"
-                />
+		<div class="r-mapa-wrap">
+			<img
+				src="../../../assets/images/rute/r1/prikazr1.jpg"
+				alt="Prikaz rute R1"
+				class="r-mapa-slika"
+				draggable="false"
+			/>
 
-                <!-- Hint -->
-                <div class="r-mapa-hint">
-                    <i class="fa-solid fa-location-dot"></i> Klikni na tačke!
-                </div>
+			<div class="r-mapa-hint">
+				<i class="fa-solid fa-location-dot"></i> Klikni na tačke!
+			</div>
 
-                <!-- TAČKE NA MAPI – pozicije prema prikazr1.jpg -->
-                <button class="r-tacka" style="left: 49%; top: 20%;" data-id="strbacki">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Štrbački Buk</span>
-                </button>
+			<button class="r-tacka" style="left: 49%; top: 15%;" data-id="strbacki">
+				<i class="fa-solid fa-location-dot"></i>
+				<span>Štrbački Buk</span>
+			</button>
 
-                <button class="r-tacka" style="left: 46%; top: 36%;" data-id="prevrtac">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Prevrtač</span>
-                </button>
+			<button class="r-tacka" style="left: 46%; top: 36%;" data-id="prevrtac">
+				<i class="fa-solid fa-location-dot"></i>
+				<span>Prevrtač</span>
+			</button>
 
-                <button class="r-tacka" style="left: 52%; top: 41%;" data-id="zirin">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Zirin Slap</span>
-                </button>
+			<button class="r-tacka" style="left: 52%; top: 41%;" data-id="zirin">
+				<i class="fa-solid fa-location-dot"></i>
+				<span>Zirin Slap</span>
+			</button>
 
-                <button class="r-tacka" style="left: 54%; top: 50%;" data-id="veliki">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Veliki Labirinti</span>
-                </button>
+			<button class="r-tacka" style="left: 54%; top: 50%;" data-id="veliki">
+				<i class="fa-solid fa-location-dot"></i>
+				<span>Veliki Labirinti</span>
+			</button>
 
-                <button class="r-tacka" style="left: 68%; top: 56%;" data-id="vrela">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Vrela (Pećina)</span>
-                </button>
+			<button class="r-tacka" style="left: 68%; top: 56%;" data-id="vrela">
+				<i class="fa-solid fa-location-dot"></i>
+				<span>Vrela (Pećina)</span>
+			</button>
 
-                <button class="r-tacka" style="left: 43%; top: 59%;" data-id="mali">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Mali Labirinti</span>
-                </button>
+			<button class="r-tacka" style="left: 43%; top: 59%;" data-id="mali">
+				<i class="fa-solid fa-location-dot"></i>
+				<span>Mali Labirinti</span>
+			</button>
 
-                <button class="r-tacka" style="left: 50%; top: 75%;" data-id="loskunski">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Loskunski Most</span>
-                </button>
+			<button class="r-tacka" style="left: 50%; top: 75%;" data-id="loskunski">
+				<i class="fa-solid fa-location-dot"></i>
+				<span>Loskunski Most</span>
+			</button>
 
-                <button class="r-tacka" style="left: 50%; top: 93%;" data-id="troslap">
-                    <i class="fa-solid fa-location-dot"></i>
-                    <span>Troslap (Kraj)</span>
-                </button>
-            </div>
-        </div>
-    </section>
+			<button class="r-tacka" style="left: 50%; top: 93%;" data-id="troslap">
+				<i class="fa-solid fa-location-dot"></i>
+				<span>Troslap (Kraj)</span>
+			</button>
+		</div>
 
-    <!-- ========== MODAL ========== -->
-    <div class="r-modal-overlay" id="rModalOverlay">
-        <div class="r-modal" id="rModal">
-            <button class="r-modal-zatvori" id="rModalZatvori">
-                <i class="fa-solid fa-xmark"></i>
-            </button>
+		<!-- Lista tačaka – vidljiva samo na mobilnom -->
+		<ul class="r-tacka-lista">
+			<li><button class="r-lista-btn" data-id="strbacki"><i class="fa-solid fa-location-dot"></i> Štrbački Buk</button></li>
+			<li><button class="r-lista-btn" data-id="prevrtac"><i class="fa-solid fa-location-dot"></i> Prevrtač</button></li>
+			<li><button class="r-lista-btn" data-id="zirin"><i class="fa-solid fa-location-dot"></i> Zirin Slap</button></li>
+			<li><button class="r-lista-btn" data-id="veliki"><i class="fa-solid fa-location-dot"></i> Veliki Labirinti</button></li>
+			<li><button class="r-lista-btn" data-id="vrela"><i class="fa-solid fa-location-dot"></i> Vrela (Pećina)</button></li>
+			<li><button class="r-lista-btn" data-id="mali"><i class="fa-solid fa-location-dot"></i> Mali Labirinti</button></li>
+			<li><button class="r-lista-btn" data-id="loskunski"><i class="fa-solid fa-location-dot"></i> Loskunski Most</button></li>
+			<li><button class="r-lista-btn" data-id="troslap"><i class="fa-solid fa-location-dot"></i> Troslap (Kraj)</button></li>
+		</ul>
 
-            <!-- Slider -->
-            <div class="r-modal-slider-wrap">
-                <div class="r-modal-slider" id="rModalSlider">
-                    <!-- Media se ubacuje dinamički -->
-                </div>
-                <button class="r-modal-prev" id="rModalPrev">
-                    <i class="fa-solid fa-chevron-left"></i>
-                </button>
-                <button class="r-modal-next" id="rModalNext">
-                    <i class="fa-solid fa-chevron-right"></i>
-                </button>
-                <div class="r-modal-dots" id="rModalDots"></div>
-            </div>
+	</div>
+</section>
 
-            <!-- Info -->
-            <div class="r-modal-info">
-                <h3 class="r-modal-naslov" id="rModalNaslov"></h3>
-                <p class="r-modal-tekst" id="rModalTekst"></p>
-            </div>
-        </div>
-    </div>
+<!-- ========== MODAL ========== -->
+<div class="r-modal-overlay" id="rModalOverlay">
+	<div class="r-modal" id="rModal">
+		<button class="r-modal-zatvori" id="rModalZatvori">
+			<i class="fa-solid fa-xmark"></i>
+		</button>
+
+		<div class="r-modal-slider-wrap">
+			<div class="r-modal-slider" id="rModalSlider"></div>
+			<button class="r-modal-prev" id="rModalPrev">
+				<i class="fa-solid fa-chevron-left"></i>
+			</button>
+			<button class="r-modal-next" id="rModalNext">
+				<i class="fa-solid fa-chevron-right"></i>
+			</button>
+			<div class="r-modal-dots" id="rModalDots"></div>
+		</div>
+
+		<div class="r-modal-info">
+			<h3 class="r-modal-naslov" id="rModalNaslov"></h3>
+			<p class="r-modal-tekst" id="rModalTekst"></p>
+		</div>
+	</div>
+</div>
 
     <!-- ========== INSTAGRAM GALERIJA ========== -->
     <section class="galerija" id="galerija" aria-labelledby="galerija-naslov">

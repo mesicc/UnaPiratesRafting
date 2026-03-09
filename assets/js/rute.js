@@ -280,3 +280,10 @@
 	});
 
 })();
+
+	/* ---- Lista tačaka ispod mape ---- */
+	document.querySelectorAll('.r-lista-btn').forEach(function (btn) {
+		btn.addEventListener('click', function () {
+			otvoriModal(btn.dataset.id);
+		});
+	});

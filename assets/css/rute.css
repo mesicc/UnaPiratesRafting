@@ -700,3 +700,46 @@
 	line-height: 1.7;
 	margin: 0;
 }
+
+
+/* ========== LISTA TAČAKA (vidljiva samo na mobilnom) ========== */
+
+.r-tacka-lista {
+	display: none; /* sakrivena na desktopu */
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+.r-lista-btn {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	width: 100%;
+	background: #fff;
+	border: none;
+	border-radius: 12px;
+	padding: 14px 18px;
+	font-family: var(--font);
+	font-size: 14px;
+	font-weight: 700;
+	color: #1a1a1a;
+	cursor: pointer;
+	text-align: left;
+	transition: background 0.15s, transform 0.15s;
+}
+
+.r-lista-btn i {
+	color: var(--orange);
+	font-size: 16px;
+	flex-shrink: 0;
+}
+
+.r-lista-btn:hover {
+	background: #f5f2ec;
+	transform: translateX(4px);
+}
+
+.r-lista-btn:active {
+	transform: scale(0.98);
+}
