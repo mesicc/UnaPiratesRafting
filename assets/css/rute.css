@@ -743,3 +743,55 @@
 .r-lista-btn:active {
 	transform: scale(0.98);
 }
+
+/* ========== CTA SEKCIJA – Spremni za avanturu? ========== */
+
+.r-cta {
+	background: #DDE8E2;
+	padding: 80px 24px;
+}
+
+.r-cta-container {
+	max-width: 700px;
+	margin: 0 auto;
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+.r-cta-naslov {
+	font-size: 36px;
+	font-weight: 900;
+	color: #1a1a1a;
+	margin: 0;
+	line-height: 1.15;
+}
+
+.r-cta-opis {
+	font-size: 16px;
+	color: #555;
+	line-height: 1.7;
+	margin: 0;
+	max-width: 560px;
+}
+
+.btn-r-cta {
+	display: inline-block;
+	background: var(--orange);
+	color: #fff;
+	font-family: var(--font);
+	font-size: 16px;
+	font-weight: 800;
+	padding: 18px 48px;
+	border-radius: 50px;
+	text-decoration: none;
+	transition: background 0.2s, transform 0.2s;
+	margin-top: 4px;
+}
+
+.btn-r-cta:hover {
+	background: var(--orange-dark);
+	transform: translateY(-2px);
+}

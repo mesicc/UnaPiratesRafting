@@ -874,3 +874,41 @@
 		left: 8px;
 	}
 }
+
+
+/* ========== CTA SEKCIJA – RESPONZIVNOST ========== */
+
+@media (max-width: 768px) {
+	.r-cta {
+		padding: 56px 20px;
+	}
+
+	.r-cta-naslov {
+		font-size: 26px;
+	}
+
+	.r-cta-opis {
+		font-size: 15px;
+	}
+
+	.btn-r-cta {
+		font-size: 15px;
+		padding: 16px 40px;
+		width: 100%;
+		text-align: center;
+	}
+}
+
+@media (max-width: 480px) {
+	.r-cta {
+		padding: 48px 16px;
+	}
+
+	.r-cta-naslov {
+		font-size: 22px;
+	}
+
+	.r-cta-opis {
+		font-size: 14px;
+	}
+}
