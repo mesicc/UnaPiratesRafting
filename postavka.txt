@@ -1,13 +1,19 @@
 ZAVRŠENO:
 
-    1) Rute/R1 - sve postavljeno
+    1) Rute r1.html - sve postavljeno
     2) Smjestaj.html - sve postavljeno
+    3) O-nama.html -> !Napraviti update skipera!!
 
 
 
 
 POPRAVITI:
     1) index.html - galerija responzivnost tablet verzija
+    2) 
+    3) <meta property="og:url" content="https://www.unapirates.com/o-nama.html" />
+	   <meta property="og:image" content="https://www.unapirates.com/assets/images/og-o-nama.jpg" />
+       TREBA IĆI DRUGA DOMENA, prepraviti u svim fajlovima
+    4) o-nama.html dodati druge skipere, obrisati stare
 
 
 
