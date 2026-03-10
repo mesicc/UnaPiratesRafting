@@ -1,0 +1,17 @@
+ZAVRŠENO:
+
+    1) Rute/R1 - sve postavljeno
+    2) Smjestaj.html - sve postavljeno
+
+
+
+
+POPRAVITI:
+    1) index.html - galerija responzivnost tablet verzija
+
+
+
+
+
+NAPRAVITI:
+    1) rezervacija.php - glavni folder
