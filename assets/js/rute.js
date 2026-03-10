@@ -40,85 +40,89 @@
 				{ tip: 'slika', src: '../../../assets/images/rute/r1/stbackibuk/strbackibuk1.jpeg' },
 				{ tip: 'slika', src: '../../../assets/images/rute/r1/stbackibuk/strbackibuk2.jpeg' },
 				{ tip: 'slika', src: '../../../assets/images/rute/r1/stbackibuk/strbackibuk3.jpeg' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/strbackibuk1.mp4' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/strbackibuk2.mp4' }
+				{ tip: 'video', src: '../../../assets/videos/rute/strbackibuk1.mp4' }
 			]
 		},
 		prevrtac: {
 			naslov: '📍 Prevrtač',
 			tekst: 'Jedan od najuzbudljivijih brzaka na ruti – ovdje rijeka testira tvoje vještine i hrabrost!',
 			media: [
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/prevrtac/prevrtac1.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/prevrtac/prevrtac2.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/prevrtac/prevrtac3.jpeg' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/prevrtac1.mp4' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/prevrtac2.mp4' }
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/prevrtac/prevrtac1.jpeg' }
+				// { tip: 'video', src: '../../../assets/videos/rute/prevrtac1.mp4' }
 			]
 		},
 		zirin: {
 			naslov: '📍 Zirin Slap',
 			tekst: 'Lijepi mali slap usred kanjona – savršeno mjesto za kratku pauzu i fotografiju.',
 			media: [
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/zirin/zirin1.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/zirin/zirin2.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/zirin/zirin3.jpeg' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/zirin1.mp4' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/zirin2.mp4' }
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/zirinslap/zirinslap1.jpeg' },
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/zirinslap/zirinslap2.jpeg' },
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/zirinslap/zirinslap3.jpeg' },
+                { tip: 'slika', src: '../../../assets/images/rute/r1/zirinslap/zirinslap4.jpeg' },
+                { tip: 'slika', src: '../../../assets/images/rute/r1/zirinslap/zirinslap5.jpeg' }
+				// { tip: 'video', src: '../../../assets/videos/rute/r1/zirin1.mp4' },
+				// { tip: 'video', src: '../../../assets/videos/rute/r1/zirin2.mp4' }
 			]
 		},
 		veliki: {
 			naslov: '📍 Veliki Labirinti',
 			tekst: 'Kompleksni sistem brzaka gdje rafting čamac prolazi kroz uzak kanjon – pravo iskustvo za cijeli tim.',
 			media: [
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/veliki1.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/veliki2.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/veliki3.jpeg' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/veliki1.mp4' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/veliki2.mp4' }
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/velikilabirint1.jpeg' }
+				// { tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/veliki2.jpeg' },
+				// { tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/veliki3.jpeg' },
+				// { tip: 'video', src: '../../../assets/videos/rute/r1/veliki1.mp4' },
+				// { tip: 'video', src: '../../../assets/videos/rute/r1/veliki2.mp4' }
 			]
 		},
 		vrela: {
 			naslov: '📍 Vrela (Pećina)',
 			tekst: 'Misteriozna pećina sa izvorom kristalno čiste vode temperature 7°C – obavezna atrakcija na ruti.',
 			media: [
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/vrela/vrela1.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/vrela/vrela2.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/vrela/vrela3.jpeg' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/vrela1.mp4' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/vrela2.mp4' }
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/pecina/pecina1.jpeg' },
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/pecina/pecina2.jpeg' },
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/pecina/pecina3.jpeg' },
+                { tip: 'slika', src: '../../../assets/images/rute/r1/pecina/pecina4.jpeg' }
+                // { tip: 'slika', src: '../../../assets/images/rute/r1/pecina/pecina5.jpeg' }
+				// { tip: 'video', src: '../../../assets/videos/rute/r1/vrela1.mp4' },
+				// { tip: 'video', src: '../../../assets/videos/rute/r1/vrela2.mp4' }
 			]
 		},
 		mali: {
 			naslov: '📍 Mali Labirinti',
 			tekst: 'Niz manjih brzaka koji nude zabavu i adrenalinski ubrzaj – savršeni za skokove sa stijena!',
 			media: [
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/mali1.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/mali2.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/mali3.jpeg' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/mali1.mp4' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/mali2.mp4' }
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/velikilabirint2.jpeg' },
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/velikilabirint3.jpeg' }
+				// { tip: 'slika', src: '../../../assets/images/rute/r1/labirinti/mali3.jpeg' },
+				// { tip: 'video', src: '../../../assets/videos/rute/r1/mali1.mp4' },
+				// { tip: 'video', src: '../../../assets/videos/rute/r1/mali2.mp4' }
 			]
 		},
 		loskunski: {
 			naslov: '📍 Loskunski Most',
 			tekst: 'Historijski most iznad Une – popularna tačka za skokove i nezaboravne fotografije.',
 			media: [
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/loskunski/loskunski1.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/loskunski/loskunski2.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/loskunski/loskunski3.jpeg' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/loskunski1.mp4' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/loskunski2.mp4' }
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/loskun/loskun1.jpeg' },
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/loskun/loskun2.jpeg' },
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/loskun/loskun3.jpeg' },
+                { tip: 'slika', src: '../../../assets/images/rute/r1/loskun/loskun4.jpeg' },
+				{ tip: 'video', src: '../../../assets/videos/rute/loskunski1.mp4' },
+				{ tip: 'video', src: '../../../assets/videos/rute/loskunski2.mp4' },
+                { tip: 'video', src: '../../../assets/videos/rute/loskunski3.mp4' },
+                { tip: 'video', src: '../../../assets/videos/rute/loskunski4.mp4' },
+                { tip: 'video', src: '../../../assets/videos/rute/loskunski5.mp4' }
 			]
 		},
 		troslap: {
 			naslov: '📍 Troslap (Kraj)',
 			tekst: 'Završna tačka rute R1 – spektakularan trostruki slap koji označava kraj nezaboravne avanture.',
 			media: [
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/troslap/troslap1.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/troslap/troslap2.jpeg' },
-				{ tip: 'slika', src: '../../../assets/images/rute/r1/troslap/troslap3.jpeg' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/troslap1.mp4' },
-				{ tip: 'video', src: '../../../assets/videos/rute/r1/troslap2.mp4' }
+				{ tip: 'slika', src: '../../../assets/images/rute/r1/troslap/troslap1.jpeg' }
+				// { tip: 'slika', src: '../../../assets/images/rute/r1/troslap/troslap2.jpeg' },
+				// { tip: 'slika', src: '../../../assets/images/rute/r1/troslap/troslap3.jpeg' },
+				// { tip: 'video', src: '../../../assets/videos/rute/r1/troslap1.mp4' },
+				// { tip: 'video', src: '../../../assets/videos/rute/r1/troslap2.mp4' }
 			]
 		}
 	};
