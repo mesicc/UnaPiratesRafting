@@ -628,6 +628,34 @@ ul { list-style: none; }
     margin-bottom: clamp(14px, 2vw, 24px);
 }
 
+.ruta-body .r-hero-meta {
+	list-style: none;
+	padding: 0;
+	margin: 12px 0 0;
+	display: flex;
+	flex-direction: column;
+	gap: 6px;
+    margin-bottom: 13px;
+}
+
+.ruta-body .r-hero-meta li {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	font-size: 13px;
+	font-weight: 600;
+	color: #555;
+}
+
+.ruta-body .r-hero-meta li i {
+	color: var(--orange);
+	font-size: 13px;
+	width: 16px;
+	text-align: center;
+	flex-shrink: 0;
+}
+
+
 .ruta-btns {
     display: flex;
     align-items: center;
