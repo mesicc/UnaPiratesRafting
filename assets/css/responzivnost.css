@@ -912,3 +912,69 @@
 		font-size: 14px;
 	}
 }
+
+
+
+/* ========================================
+   KAYAK – RESPONZIVNOST
+   Dodaj na kraj responzivnost.css
+   ======================================== */
+
+@media (max-width: 900px) {
+	.kayak-kartice {
+		grid-template-columns: 1fr;
+		max-width: 560px;
+	}
+
+	.kayak-intro-naslov {
+		font-size: 26px;
+	}
+}
+
+@media (max-width: 768px) {
+	.kayak-main {
+		padding: 48px 16px 64px;
+	}
+
+	.kayak-intro {
+		margin-bottom: 32px;
+	}
+
+	.kayak-intro-naslov {
+		font-size: 22px;
+	}
+
+	.kayak-intro-opis {
+		font-size: 15px;
+	}
+
+	.kayak-kartica-body {
+		padding: 22px 20px 26px;
+	}
+
+	.kayak-kartica-naslov {
+		font-size: 20px;
+	}
+
+	.kayak-kartica-opis {
+		font-size: 14px;
+	}
+
+	.kayak-iznos {
+		font-size: 34px;
+	}
+}
+
+@media (max-width: 480px) {
+	.kayak-main {
+		padding: 40px 14px 56px;
+	}
+
+	.kayak-kartice {
+		max-width: 100%;
+	}
+
+	.kayak-kartica-body {
+		padding: 18px 16px 22px;
+	}
+}

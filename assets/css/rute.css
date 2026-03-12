@@ -795,3 +795,170 @@
 	background: var(--orange-dark);
 	transform: translateY(-2px);
 }
+
+/* ========================================
+   KAYAK.CSS – assets/css/kayak.css
+   ======================================== */
+
+/* ---- Intro ---- */
+.kayak-main {
+	background: #EDEAE4;
+	padding: 64px 24px 80px;
+}
+
+.kayak-intro {
+	max-width: 1100px;
+	margin: 0 auto 48px;
+	text-align: center;
+}
+
+.kayak-intro-naslov {
+	font-size: 32px;
+	font-weight: 900;
+	color: #1a1a1a;
+	margin: 0 0 12px;
+}
+
+.kayak-intro-opis {
+	font-size: 16px;
+	color: #666;
+	line-height: 1.7;
+	margin: 0;
+	max-width: 600px;
+	margin: 0 auto;
+}
+
+/* ---- Grid kartice ---- */
+.kayak-kartice {
+	max-width: 1100px;
+	margin: 0 auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	gap: 28px;
+}
+
+/* ---- Kartica ---- */
+.kayak-kartica {
+	background: #fff;
+	border-radius: 20px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 2px 16px rgba(0,0,0,0.07);
+}
+
+.kayak-kartica-slika-wrap {
+	width: 100%;
+	aspect-ratio: 13 / 10;
+	overflow: hidden;
+}
+
+.kayak-kartica-slika {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	display: block;
+	transition: transform 0.4s ease;
+	object-position: center 60%; /* pomjeri gore/dole – mijenjaj drugi bro*/
+}
+
+.kayak-kartica:hover .kayak-kartica-slika {
+	transform: scale(1.04);
+}
+
+/* ---- Body ---- */
+.kayak-kartica-body {
+	padding: 28px 28px 32px;
+	display: flex;
+	flex-direction: column;
+	flex: 1;
+}
+
+.kayak-kartica-naslov {
+	font-size: 22px;
+	font-weight: 900;
+	color: #1a1a1a;
+	margin: 0 0 12px;
+}
+
+.kayak-kartica-opis {
+	font-size: 15px;
+	color: #555;
+	line-height: 1.75;
+	margin: 0 0 20px;
+}
+
+/* ---- Cijena ---- */
+.kayak-kartica-cijena {
+	display: flex;
+	align-items: baseline;
+	gap: 6px;
+	margin-bottom: 16px;
+}
+
+.kayak-iznos {
+	font-size: 40px;
+	font-weight: 900;
+	color: #1a1a1a;
+	line-height: 1;
+}
+
+.kayak-po {
+	font-size: 15px;
+	font-weight: 600;
+	color: #888;
+}
+
+/* ---- Uključeno ---- */
+.kayak-ukljuceno-naslov {
+	font-size: 14px;
+	font-weight: 800;
+	color: #1a1a1a;
+	margin: 0 0 10px;
+}
+
+.kayak-ukljuceno {
+	list-style: none;
+	padding: 0;
+	margin: 0 0 24px;
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.kayak-ukljuceno li {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+	font-size: 14px;
+	font-weight: 600;
+	color: #444;
+}
+
+.kayak-ukljuceno li i {
+	color: var(--green-nav);
+	font-size: 16px;
+	flex-shrink: 0;
+}
+
+/* ---- Dugme ---- */
+.btn-kayak-rezervisi {
+	display: block;
+	width: 100%;
+	background: var(--orange);
+	color: #fff;
+	font-family: var(--font);
+	font-size: 15px;
+	font-weight: 800;
+	padding: 16px;
+	border-radius: 50px;
+	text-decoration: none;
+	text-align: center;
+	transition: background 0.2s, transform 0.15s;
+	margin-top: auto;
+}
+
+.btn-kayak-rezervisi:hover {
+	background: var(--orange-dark);
+	transform: translateY(-2px);
+}

@@ -1,11 +1,337 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bs">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+	<title>Kayak Safari – Una Pirates | Kajak na rijeci Uni, Bihać</title>
+	<meta name="description" content="Kayak Safari na rijeci Uni – dvije rute: Kostela Paradise i Bihać City. Idealno za početnike i ljubitelje prirode. Profesionalni vodiči, kompletna oprema. Od 35€/osobi." />
+	<meta name="keywords" content="kayak safari Una, kajak Bihać, kajak NP Una, Kostela kayak safari, City kayak safari Bihać, Una Pirates kayak, kajak rijeka Una" />
+	<meta name="robots" content="index, follow" />
+	<link rel="canonical" href="https://www.unapirates.com/pages/rute/kayak.html" />
+	<meta property="og:title" content="Kayak Safari – Una Pirates | Kajak na rijeci Uni" />
+	<meta property="og:description" content="Dvije kajak rute na rijeci Uni – Kostela Paradise i Bihać City Safari. Kristalno čista voda, netaknuta priroda, iskusni vodiči." />
+	<meta property="og:type" content="website" />
+	<meta property="og:url" content="https://www.unapirates.com/pages/rute/kayak.html" />
+	<meta property="og:image" content="https://www.unapirates.com/assets/images/rute/kayak/kayak.jpeg" />
+
+	<link rel="icon" type="image/webp" href="../../assets/images/logo.webp" />
+	<link rel="apple-touch-icon" href="../../assets/images/logo.webp" />
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800;900&display=swap" rel="stylesheet" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+	<link rel="stylesheet" href="../../assets/css/style.css" />
+	<link rel="stylesheet" href="../../assets/css/rute.css" />
+	<link rel="stylesheet" href="../../assets/css/responzivnost.css" />
 </head>
 <body>
-    
+
+	<!-- ========== NAVBAR ========== -->
+	<nav class="navbar" id="navbar">
+		<div class="nav-container">
+			<a href="../../index.html" class="nav-logo">
+				<img src="../../assets/images/logo.webp" alt="Una Pirates Logo" />
+				<div class="nav-logo-text">
+					<span class="nav-logo-main">Rafting na Uni</span>
+					<span class="nav-logo-sub">BY UNA PIRATES</span>
+				</div>
+			</a>
+			<ul class="nav-links" id="navLinks">
+				<li><a href="../../index.html" class="nav-link">POČETNA</a></li>
+				<li><a href="../../o-nama.html" class="nav-link">O NAMA</a></li>
+				<li><a href="../../rute.html" class="nav-link active">RUTE</a></li>
+				<li><a href="../../team-building.html" class="nav-link">TEAM BUILDING</a></li>
+				<li><a href="../../smjestaj.html" class="nav-link">SMJEŠTAJ</a></li>
+			</ul>
+			<div class="nav-right">
+				<div class="lang-switcher" id="langSwitcher">
+					<button class="lang-btn" id="langBtn">
+						<i class="fa-solid fa-globe"></i>
+						<span id="currentLang">BS</span>
+						<i class="fa-solid fa-chevron-down"></i>
+					</button>
+					<div class="lang-dropdown" id="langDropdown">
+						<div class="lang-option active" data-lang="BS"><img src="https://flagcdn.com/w20/ba.png" alt="BA" /> Bosanski <i class="fa-solid fa-check"></i></div>
+						<div class="lang-option" data-lang="EN"><img src="https://flagcdn.com/w20/gb.png" alt="EN" /> English</div>
+						<div class="lang-option" data-lang="DE"><img src="https://flagcdn.com/w20/de.png" alt="DE" /> Deutsch</div>
+						<div class="lang-option" data-lang="AR"><img src="https://flagcdn.com/w20/sa.png" alt="AR" /> العربية</div>
+					</div>
+				</div>
+				<a href="../../rezervacija.php" class="btn-rezervisi">Rezerviši</a>
+				<button class="hamburger" id="hamburger" aria-label="Otvori meni"><span></span><span></span><span></span></button>
+			</div>
+		</div>
+	</nav>
+
+	<!-- ========== MOBILE MENU ========== -->
+	<div class="mobile-menu" id="mobileMenu">
+		<div class="mobile-menu-header">
+			<a href="../../index.html" class="nav-logo">
+				<img src="../../assets/images/logo.webp" alt="Una Pirates Logo" />
+				<div class="nav-logo-text">
+					<span class="nav-logo-main">Rafting na Uni</span>
+					<span class="nav-logo-sub">BY UNA PIRATES</span>
+				</div>
+			</a>
+			<div class="mobile-menu-right">
+				<div class="lang-switcher" id="langSwitcherMobile">
+					<button class="lang-btn lang-btn-dark" id="langBtnMobile">
+						<i class="fa-solid fa-globe"></i>
+						<span id="currentLangMobile">BS</span>
+						<i class="fa-solid fa-chevron-down" id="langArrowMobile"></i>
+					</button>
+					<div class="lang-dropdown lang-dropdown-mobile" id="langDropdownMobile">
+						<div class="lang-option active" data-lang="BS"><img src="https://flagcdn.com/w20/ba.png" alt="BA" /> Bosanski <i class="fa-solid fa-check"></i></div>
+						<div class="lang-option" data-lang="EN"><img src="https://flagcdn.com/w20/gb.png" alt="EN" /> English</div>
+						<div class="lang-option" data-lang="DE"><img src="https://flagcdn.com/w20/de.png" alt="DE" /> Deutsch</div>
+						<div class="lang-option" data-lang="AR"><img src="https://flagcdn.com/w20/sa.png" alt="AR" /> العربية</div>
+					</div>
+				</div>
+				<button class="close-menu" id="closeMenu" aria-label="Zatvori meni"><i class="fa-solid fa-xmark"></i></button>
+			</div>
+		</div>
+		<ul class="mobile-nav-links">
+			<li><a href="../../index.html" class="mobile-nav-link">Početna</a></li>
+			<li><a href="../../o-nama.html" class="mobile-nav-link">O nama</a></li>
+			<li><a href="../../rute.html" class="mobile-nav-link">Rute</a></li>
+			<li><a href="../../team-building.html" class="mobile-nav-link">Team Building</a></li>
+			<li><a href="../../smjestaj.html" class="mobile-nav-link">Smještaj</a></li>
+		</ul>
+		<a href="../../rezervacija.php" class="btn-rezervisi btn-rezervisi-full">Rezerviši</a>
+	</div>
+	<div class="menu-overlay" id="menuOverlay"></div>
+
+	<!-- ========== HERO ========== -->
+	<section class="r-hero">
+		<div class="r-hero-bg" style="background-image: url('../../assets/images/rute/kayak/kayak.jpeg'); background-position: center 65%;"></div>
+		<div class="r-hero-overlay"></div>
+		<div class="r-hero-content">
+			<a href="../../rute.html" class="r-hero-nazad">
+				<i class="fa-solid fa-arrow-left"></i> Nazad na rute
+			</a>
+			<h1 class="r-hero-title">Kayak Safari</h1>
+			<div class="r-hero-tag-wrap">
+				<span class="r-hero-tag">Kostela Paradise / Bihać City</span>
+			</div>
+			<ul class="r-hero-meta">
+				<li><i class="fa-regular fa-clock"></i> približno 3h</li>
+				<li><i class="fa-solid fa-people-group"></i> 10+ Godina</li>
+				<li><i class="fa-solid fa-mountain"></i> Težina: lako do umjereno</li>
+			</ul>
+		</div>
+	</section>
+
+	<!-- ========== MAIN – KARTICE ========== -->
+	<main class="kayak-main">
+		<div class="kayak-intro">
+			<h2 class="kayak-intro-naslov">Odaberi svoju avanturu</h2>
+			<p class="kayak-intro-opis">Dvije jedinstvene kajak rute na rijeci Uni – svaka nudi drukčije iskustvo, istu kristalno čistu vodu i iste profesionalne vodiče.</p>
+		</div>
+
+		<div class="kayak-kartice">
+
+			<!-- Kartica 1 – Kostela -->
+			<div class="kayak-kartica">
+				<div class="kayak-kartica-slika-wrap">
+					<img src="../../assets/images/rute/kayak/kayak4.jpeg" alt="Kostela Kayak Safari – rijeka Una" class="kayak-kartica-slika" />
+				</div>
+				<div class="kayak-kartica-body">
+					<h3 class="kayak-kartica-naslov">Kostela Kayak Safari</h3>
+					<p class="kayak-kartica-opis">Kostela Kayak Safari je uzbudljiva kajak ruta na rijeci Uni u blizini Bihaća, idealna za ljubitelje prirode i avanture. Ruta prolazi kroz mirnije, ali i dinamične dijelove rijeke, pružajući savršenu kombinaciju adrenalina i opuštanja. Tokom vožnje kajakom možete uživati u kristalno čistoj vodi Une, zelenim obalama i netaknutoj prirodi. Ova avantura je pogodna i za početnike uz pratnju iskusnih vodiča.</p>
+					<div class="kayak-kartica-cijena">
+						<span class="kayak-iznos">40€</span>
+						<span class="kayak-po">/ osoba</span>
+					</div>
+					<p class="kayak-ukljuceno-naslov">Cijena uključuje:</p>
+					<ul class="kayak-ukljuceno">
+						<li><i class="fa-solid fa-circle-check"></i> Osnovna kayak oprema</li>
+						<li><i class="fa-solid fa-circle-check"></i> Licencirani vodič/skiper na rijeci</li>
+					</ul>
+					<a href="../../rezervacija.php" class="btn-kayak-rezervisi">Rezerviši</a>
+				</div>
+			</div>
+
+			<!-- Kartica 2 – City -->
+			<div class="kayak-kartica">
+				<div class="kayak-kartica-slika-wrap">
+					<img src="../../assets/images/rute/kayak/kayakcity.jpeg" alt="City Kayak Safari – Bihać centar" class="kayak-kartica-slika" />
+				</div>
+				<div class="kayak-kartica-body">
+					<h3 class="kayak-kartica-naslov">City Kayak Safari</h3>
+					<p class="kayak-kartica-opis">Bihać City Kayak Safari je jedinstvena kajak ruta koja prolazi kroz samo srce grada Bihaća. Veslajući rijekom Unom, imate priliku doživjeti grad iz potpuno drugačije perspektive dok prolazite ispod mostova, pored šetališta i gradskih znamenitosti. Ruta je mirnija i pogodna za početnike, ali i za sve koji žele opuštenu avanturu na vodi. Savršena je kombinacija urbane atmosfere i prirodne ljepote rijeke Une.</p>
+					<div class="kayak-kartica-cijena">
+						<span class="kayak-iznos">35€</span>
+						<span class="kayak-po">/ osoba</span>
+					</div>
+					<p class="kayak-ukljuceno-naslov">Cijena uključuje:</p>
+					<ul class="kayak-ukljuceno">
+						<li><i class="fa-solid fa-circle-check"></i> Osnovna kayak oprema</li>
+						<li><i class="fa-solid fa-circle-check"></i> Licencirani vodič/skiper na rijeci</li>
+					</ul>
+					<a href="../../rezervacija.php" class="btn-kayak-rezervisi">Rezerviši</a>
+				</div>
+			</div>
+
+		</div>
+	</main>
+
+	<!-- ========== GALERIJA ========== -->
+	<section class="galerija" id="galerija" aria-labelledby="galerija-naslov">
+		<div class="galerija-container">
+			<header class="galerija-header">
+				<h2 class="r-sekcija-naslov">Naša Galerija</h2>
+			</header>
+			<div class="galerija-grid" id="galerijaGrid" role="list">
+				<figure class="galerija-item" role="listitem" data-index="0">
+					<img src="../../assets/images/rute/kayak/kayak3.jpeg" alt="Una Pirates rafting tim ispod Štrbačkog buka" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item" role="listitem" data-index="1">
+					<img src="../../assets/images/rute/kayak/kayak4.jpeg" alt="Kajak na rijeci Uni" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item" role="listitem" data-index="2">
+					<img src="../../assets/images/rute/kayak/kayak7.jpeg" alt="Loskun – rijeka Una" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item" role="listitem" data-index="3">
+					<img src="../../assets/images/rute/kayak/kayak9.jpeg" alt="Troslap – rijeka Una" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="4">
+					<img src="../../assets/images/rute/kayak/kayak12.jpeg" alt="Pećina na rijeci Uni" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="5">
+					<img src="../../assets/images/rute/kayak/kayak6.jpeg" alt="Izvorski slap" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="6">
+					<img src="../../assets/images/rute/kayak/kayak1.jpeg" alt="Veliki labirinti" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="7">
+					<img src="../../assets/images/rute/kayak/kayak8.jpeg" alt="Loskun most" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="8">
+					<img src="../../assets/images/rute/kayak/kayak18.jpeg" alt="Izvorski slap Una" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="9">
+					<img src="../../assets/images/rute/kayak/kayak4.jpeg" alt="Labirinti rijeke Une" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="10">
+					<img src="../../assets/images/rute/kayak/kayak10.jpeg" alt="Pećina Una Pirates" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="11">
+					<img src="../../assets/images/rute/kayak/kayak11.jpeg" alt="Loskun rijeka Una" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="12">
+					<img src="../../assets/images/rute/kayak/kayak2.jpeg" alt="Slap na rijeci Uni" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="13">
+					<img src="../../assets/images/rute/kayak/kayak13.jpeg" alt="Loskun most Una" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="14">
+					<img src="../../assets/images/rute/kayak/kayak14.jpeg" alt="Pećina na Uni" loading="lazy" width="400" height="400" />
+				</figure>
+				<figure class="galerija-item galerija-item--hidden" role="listitem" data-index="15">
+					<img src="../../assets/images/rute/kayak/kayak15.jpeg" alt="Troslap kraj rute" loading="lazy" width="400" height="400" />
+				</figure>
+                <figure class="galerija-item galerija-item--hidden" role="listitem" data-index="15">
+					<img src="../../assets/images/rute/kayak/kayak16.jpeg" alt="Troslap kraj rute" loading="lazy" width="400" height="400" />
+				</figure>
+                <figure class="galerija-item galerija-item--hidden" role="listitem" data-index="15">
+					<img src="../../assets/images/rute/kayak/kayak17.jpeg" alt="Troslap kraj rute" loading="lazy" width="400" height="400" />
+				</figure>
+                <figure class="galerija-item galerija-item--hidden" role="listitem" data-index="15">
+					<img src="../../assets/images/rute/kayak/kayak19.jpeg" alt="Troslap kraj rute" loading="lazy" width="400" height="400" />
+				</figure>
+                <figure class="galerija-item galerija-item--hidden" role="listitem" data-index="15">
+					<img src="../../assets/images/rute/kayak/kayak20.jpeg" alt="Troslap kraj rute" loading="lazy" width="400" height="400" />
+				</figure>
+			</div>
+			<div class="galerija-actions">
+				<button class="btn-vidi-vise" id="btnVidiVise" aria-expanded="false">Vidi više</button>
+				<button class="btn-vidi-manje hidden" id="btnVidiManje">Vidi manje</button>
+			</div>
+		</div>
+	</section>
+
+	<!-- ========== LIGHTBOX ========== -->
+	<div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pregled slike" aria-hidden="true">
+		<div class="lightbox-overlay" id="lightboxOverlay"></div>
+		<button class="lightbox-close" id="lightboxClose" aria-label="Zatvori pregled"><i class="fa-solid fa-xmark"></i></button>
+		<button class="lightbox-prev" id="lightboxPrev" aria-label="Prethodna slika"><i class="fa-solid fa-chevron-left"></i></button>
+		<button class="lightbox-next" id="lightboxNext" aria-label="Sljedeća slika"><i class="fa-solid fa-chevron-right"></i></button>
+		<div class="lightbox-content">
+			<img src="" alt="" class="lightbox-img" id="lightboxImg" />
+			<p class="lightbox-counter" id="lightboxCounter">1 / 16</p>
+		</div>
+	</div>
+
+	<!-- ========== CTA ========== -->
+	<section class="r-cta">
+		<div class="r-cta-container">
+			<h2 class="r-cta-naslov">Spremni za avanturu?</h2>
+			<p class="r-cta-opis">Rezervišite svoju kayak avanturu! Ispunite našu kontakt formu, a naš tim će vam se javiti kako bi potvrdio vašu rezervaciju i pružio sve potrebne informacije.</p>
+			<a href="../../rezervacija.php" class="btn-r-cta">Rezerviraj sada</a>
+		</div>
+	</section>
+
+	<!-- ========== FOOTER ========== -->
+	<footer class="footer" role="contentinfo">
+		<div class="footer-main">
+			<div class="footer-container">
+				<div class="footer-col footer-col--brand">
+					<a href="../../index.html" class="footer-logo" aria-label="Una Pirates">
+						<img src="../../assets/images/logo.webp" alt="Una Pirates logo" width="52" height="52" />
+						<div class="footer-logo-text">
+							<span class="footer-logo-main">Rafting na Uni</span>
+							<span class="footer-logo-sub">BY UNA PIRATES</span>
+						</div>
+					</a>
+					<div class="footer-social" aria-label="Socijalne mreze">
+						<a href="https://www.instagram.com/una_pirates" target="_blank" rel="noopener noreferrer" class="footer-social-btn"><i class="fa-brands fa-instagram"></i></a>
+						<a href="https://www.tiktok.com/@una.pirates" target="_blank" rel="noopener noreferrer" class="footer-social-btn"><i class="fa-brands fa-tiktok"></i></a>
+					</div>
+				</div>
+				<div class="footer-col">
+					<h3 class="footer-col-title">BRZI LINKOVI</h3>
+					<nav>
+						<ul class="footer-links">
+							<li><a href="../../index.html" class="footer-link">Početna</a></li>
+							<li><a href="../../o-nama.html" class="footer-link">O nama</a></li>
+							<li><a href="../../rute.html" class="footer-link">Rute</a></li>
+							<li><a href="../../team-building.html" class="footer-link">Team Building</a></li>
+							<li><a href="../../smjestaj.html" class="footer-link">Smještaj</a></li>
+						</ul>
+					</nav>
+				</div>
+				<div class="footer-col">
+					<h3 class="footer-col-title">KONTAKT I LOKACIJA</h3>
+					<ul class="footer-kontakt">
+						<li class="footer-kontakt-item">
+							<i class="fa-solid fa-location-dot footer-kontakt-icon"></i>
+							<span>NP Una, Bihać, Bosnia and Herzegovina</span>
+						</li>
+						<li class="footer-kontakt-item">
+							<i class="fa-solid fa-phone footer-kontakt-icon"></i>
+							<a href="tel:+38761782339" class="footer-kontakt-link">+387 61 782 339</a>
+						</li>
+						<li class="footer-kontakt-item">
+							<i class="fa-solid fa-envelope footer-kontakt-icon"></i>
+							<a href="mailto:info@unapirates.com" class="footer-kontakt-link">info@unapirates.com</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="footer-bottom">
+			<div class="footer-bottom-container">
+				<p class="footer-copyright">© 2026 UnaPirates. Sva prava pridržana.</p>
+				<p class="footer-credit">Web development by <a href="#" class="footer-credit-link">Kemal Mesic</a></p>
+			</div>
+		</div>
+	</footer>
+
+	<a href="https://wa.me/38761782339?text=Zdravo%2C%20zanima%20me%20kayak%20safari!"
+	   target="_blank" rel="noopener noreferrer" class="whatsapp-float" aria-label="WhatsApp">
+		<i class="fa-brands fa-whatsapp"></i>
+	</a>
+
+	<script src="../../assets/js/main.js"></script>
+	<script src="../../assets/js/rute.js"></script>
 </body>
 </html>
