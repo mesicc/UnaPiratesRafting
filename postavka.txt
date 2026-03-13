@@ -3,7 +3,7 @@ ZAVRŠENO:
     1) Rute r1.html - sve postavljeno
     2) Smjestaj.html - sve postavljeno
     3) O-nama.html -> !Napraviti update skipera!!
-    4) Kayak.html - sve postavljeno
+    4) Kayak.html - dodati slike za city turu
 
 
 
@@ -15,6 +15,7 @@ POPRAVITI:
 	   <meta property="og:image" content="https://www.unapirates.com/assets/images/og-o-nama.jpg" />
        TREBA IĆI DRUGA DOMENA, prepraviti u svim fajlovima
     4) o-nama.html dodati druge skipere, obrisati stare
+    5) Kayak.html - dodati slike za city turu
 
 
 
