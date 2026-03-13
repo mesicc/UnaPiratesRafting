@@ -915,66 +915,46 @@
 
 
 
-/* ========================================
-   KAYAK – RESPONZIVNOST
+/* =================================================================
+   KAYAK STRANICA – RESPONZIVNOST
    Dodaj na kraj responzivnost.css
-   ======================================== */
+================================================================= */
 
-@media (max-width: 900px) {
+/* ---- Tablet (max 860px) – dvije kolone ostaju, manji padding ---- */
+@media (max-width: 860px) {
+	.kayak-main { padding: 48px 20px 64px; }
+	.kayak-kartice { gap: 20px; }
+	.kayak-kartica-body { padding: 22px 22px 26px; }
+	.kayak-iznos { font-size: 34px; }
+}
+
+/* ---- Mali tablet / veliki mobitel (max 640px) – jednokolonski ---- */
+@media (max-width: 640px) {
+	.kayak-main { padding: 36px 16px 56px; }
+
 	.kayak-kartice {
 		grid-template-columns: 1fr;
-		max-width: 560px;
+		gap: 24px;
 	}
 
-	.kayak-intro-naslov {
-		font-size: 26px;
+	.kayak-kartica:hover {
+		transform: none;
 	}
+
+	.kayak-intro-naslov { font-size: 26px; }
+	.kayak-intro-opis { font-size: 15px; }
+
+	.kayak-kartica-naslov { font-size: 20px; }
+	.kayak-kartica-opis { font-size: 14px; }
+	.kayak-kartica-body { padding: 20px 18px 24px; gap: 14px; }
+
+	.kayak-iznos { font-size: 36px; }
+
+	.btn-kayak-rezervisi { padding: 15px; }
 }
 
-@media (max-width: 768px) {
-	.kayak-main {
-		padding: 48px 16px 64px;
-	}
-
-	.kayak-intro {
-		margin-bottom: 32px;
-	}
-
-	.kayak-intro-naslov {
-		font-size: 22px;
-	}
-
-	.kayak-intro-opis {
-		font-size: 15px;
-	}
-
-	.kayak-kartica-body {
-		padding: 22px 20px 26px;
-	}
-
-	.kayak-kartica-naslov {
-		font-size: 20px;
-	}
-
-	.kayak-kartica-opis {
-		font-size: 14px;
-	}
-
-	.kayak-iznos {
-		font-size: 34px;
-	}
-}
-
-@media (max-width: 480px) {
-	.kayak-main {
-		padding: 40px 14px 56px;
-	}
-
-	.kayak-kartice {
-		max-width: 100%;
-	}
-
-	.kayak-kartica-body {
-		padding: 18px 16px 22px;
-	}
+/* ---- Mobitel (max 400px) ---- */
+@media (max-width: 400px) {
+	.kayak-main { padding: 28px 14px 48px; }
+	.kayak-kartica-body { padding: 16px 14px 20px; }
 }

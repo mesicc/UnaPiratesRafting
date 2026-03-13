@@ -291,3 +291,49 @@
 			otvoriModal(btn.dataset.id);
 		});
 	});
+
+/* =================================================================
+   KAYAK SLIDER JS
+   Dodaj u svoj main.js ili kayak.js
+================================================================= */
+(function () {
+	'use strict';
+
+	document.addEventListener('DOMContentLoaded', function () {
+
+		document.querySelectorAll('.kayak-slider').forEach(function (slider) {
+			var slides  = slider.querySelector('.kayak-slides');
+			var dots    = slider.querySelectorAll('.kayak-dot');
+			var prev    = slider.querySelector('.kayak-arrow--prev');
+			var next    = slider.querySelector('.kayak-arrow--next');
+			var total   = dots.length;
+			var aktivan = 0;
+
+			function idina(idx) {
+				aktivan = ((idx % total) + total) % total;
+				slides.style.transform = 'translateX(-' + (aktivan * 100) + '%)';
+				dots.forEach(function (d, i) {
+					d.classList.toggle('active', i === aktivan);
+				});
+			}
+
+			prev.addEventListener('click', function (e) { e.stopPropagation(); idina(aktivan - 1); });
+			next.addEventListener('click', function (e) { e.stopPropagation(); idina(aktivan + 1); });
+
+			dots.forEach(function (dot, i) {
+				dot.addEventListener('click', function (e) { e.stopPropagation(); idina(i); });
+			});
+
+			/* Swipe */
+			var touchX = 0;
+			slider.addEventListener('touchstart', function (e) {
+				touchX = e.changedTouches[0].screenX;
+			}, { passive: true });
+			slider.addEventListener('touchend', function (e) {
+				var d = touchX - e.changedTouches[0].screenX;
+				if (Math.abs(d) > 40) d > 0 ? idina(aktivan + 1) : idina(aktivan - 1);
+			}, { passive: true });
+		});
+
+	});
+})();
