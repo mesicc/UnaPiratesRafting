@@ -958,3 +958,52 @@
 	.kayak-main { padding: 28px 14px 48px; }
 	.kayak-kartica-body { padding: 16px 14px 20px; }
 }
+
+
+/* =================================================================
+   RENT – HERO + INTRO RESPONZIVNOST
+   Dodaj na kraj responzivnost.css
+================================================================= */
+/* =================================================================
+   RESPONZIVNOST
+================================================================= */
+ 
+/* Tablet (max 900px) – jednokolonski: vrh → slika → tekst */
+@media (max-width: 900px) {
+	.rent-intro { padding: 60px 20px; }
+ 
+	.rent-intro-wrap {
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto auto;
+		gap: 28px;
+	}
+ 
+	.rent-intro-vrh   { grid-column: 1; grid-row: 1; }
+	.rent-intro-slika { grid-column: 1; grid-row: 2; aspect-ratio: 4 / 3; }
+	.rent-intro-tekst { grid-column: 1; grid-row: 3; }
+}
+ 
+/* Mobitel (max 600px) */
+@media (max-width: 600px) {
+	.rent-intro { padding: 40px 16px; }
+	.rent-intro-wrap { gap: 20px; }
+	.rent-intro-naslov { font-size: 22px; }
+	.rent-intro-tekst p { font-size: 15px; }
+ 
+	.rent-intro-istaknuto {
+		padding: 14px 16px;
+		gap: 10px;
+	}
+ 
+	.rent-intro-istaknuto i { font-size: 18px; }
+ 
+	.rent-intro-istaknuto p {
+		font-size: 14px;
+		color: #333;
+	}
+}
+ 
+/* Mali mobitel (max 400px) */
+@media (max-width: 400px) {
+	.rent-intro { padding: 32px 14px; }
+}
