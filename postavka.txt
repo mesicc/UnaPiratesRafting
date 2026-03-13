@@ -4,6 +4,7 @@ ZAVRŠENO:
     2) Smjestaj.html - sve postavljeno
     3) O-nama.html -> !Napraviti update skipera!!
     4) Kayak.html - dodati slike za city turu
+    5) Napravljen /pages/Rent.html
 
 
 
