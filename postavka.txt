@@ -10,7 +10,7 @@ ZAVRŠENO:
 
 
 POPRAVITI:
-    1) index.html - galerija responzivnost tablet verzija
+    1) 
     2) kartu i sliku za r1
     3) <meta property="og:url" content="https://www.unapirates.com/o-nama.html" />
 	   <meta property="og:image" content="https://www.unapirates.com/assets/images/og-o-nama.jpg" />

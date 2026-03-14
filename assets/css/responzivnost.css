@@ -200,32 +200,94 @@
     .aktivnosti-pills { gap: 8px; }
 }
 
-/* ---- GALERIJA ---- */
+/* ---- TABLET LANDSCAPE (≤ 1024px) – 3×3 ---- */
 @media (max-width: 1024px) {
-    .galerija-grid { gap: 8px; }
+    .galerija {
+        padding: 70px 20px;
+    }
+
+    .galerija-grid {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+    }
+
+    .galerija-header {
+        margin-bottom: 36px;
+    }
 }
 
+/* ---- TABLET PORTRAIT (≤ 768px) – 3×3 ---- */
 @media (max-width: 768px) {
-    .galerija { padding: 60px 16px; }
+    .galerija {
+        padding: 60px 16px;
+    }
 
     .galerija-grid {
         grid-template-columns: repeat(3, 1fr);
         gap: 6px;
     }
 
+    .galerija-header {
+        margin-bottom: 28px;
+    }
+
+    .lightbox-content {
+        padding: 60px 60px;
+    }
+
     .lightbox-prev { left: 10px; }
     .lightbox-next { right: 10px; }
 }
 
-@media (max-width: 480px) {
+/* ---- VELIKI TELEFON (≤ 600px) – 2×3 ---- */
+@media (max-width: 600px) {
+    .galerija {
+        padding: 48px 12px;
+    }
+
     .galerija-grid {
         grid-template-columns: repeat(2, 1fr);
         gap: 6px;
     }
 
+    .galerija-item {
+        border-radius: 10px;
+    }
+
+    .lightbox-content {
+        padding: 56px 52px;
+    }
+}
+
+/* ---- TELEFON (≤ 480px) – 2×3 ---- */
+@media (max-width: 480px) {
+    .galerija {
+        padding: 40px 10px;
+    }
+
+    .galerija-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+    }
+
     .galerija-title {
         flex-direction: column;
         gap: 6px;
+        text-align: center;
+    }
+
+    .galerija-item {
+        border-radius: 8px;
+    }
+
+    .btn-vidi-vise,
+    .btn-vidi-manje {
+        padding: 10px 24px;
+        font-size: 14px;
+    }
+
+    .lightbox-content {
+        padding: 56px 48px;
     }
 
     .lightbox-prev,
@@ -234,7 +296,23 @@
         height: 40px;
         font-size: 15px;
     }
+
+    .lightbox-prev { left: 6px; }
+    .lightbox-next { right: 6px; }
 }
+
+/* ---- MALI TELEFON (≤ 360px) ---- */
+@media (max-width: 360px) {
+    .galerija {
+        padding: 36px 8px;
+    }
+
+    .galerija-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 4px;
+    }
+}
+
 
 /* ---- Galerija social ---- */
 @media (max-width: 480px) {

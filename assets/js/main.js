@@ -292,114 +292,165 @@ document.addEventListener('DOMContentLoaded', function () {
 })();
 
 
-// --- Galerija – Vidi više / Vidi manje ---
+/* ============================================================
+   GALERIJA – galerija.js
+   Una Pirates
+   ============================================================ */
+
+/* ---- Vidi više / Vidi manje ---- */
 (function () {
-    const btnVise   = document.getElementById('btnVidiVise');
-    const btnManje  = document.getElementById('btnVidiManje');
-    const skrivene  = document.querySelectorAll('.galerija-item--hidden');
+    const btnVise  = document.getElementById('btnVidiVise');
+    const btnManje = document.getElementById('btnVidiManje');
+    const items    = Array.from(document.querySelectorAll('.galerija-item'));
 
-    if (!btnVise) return;
+    if (!btnVise || !btnManje) return;
 
-    btnVise.addEventListener('click', () => {
-        skrivene.forEach(el => el.style.display = 'block');
+    /**
+     * Vraća broj inicijalno vidljivih slika ovisno o širini ekrana:
+     *  - Desktop  > 1024px  → 8  (4 kolone × 2 reda)
+     *  - Tablet  ≤ 1024px  → 9  (3 kolone × 3 reda)
+     *  - Telefon ≤  600px  → 6  (2 kolone × 3 reda)
+     */
+    function getInitialCount() {
+        const w = window.innerWidth;
+        if (w <= 600)  return 6;
+        if (w <= 1024) return 9;
+        return 8;
+    }
+
+    /** Prikazuje prvih N slika, skriva ostale, resetuje dugmad. */
+    function applyVisibility() {
+        const count = getInitialCount();
+
+        items.forEach((el, i) => {
+            if (i < count) {
+                el.classList.remove('galerija-item--hidden');
+                el.style.display = '';
+            } else {
+                el.classList.add('galerija-item--hidden');
+                el.style.display = '';  // Neka CSS klasa kontroliše (display: none !important)
+            }
+        });
+
+        btnVise.classList.remove('hidden');
+        btnManje.classList.add('hidden');
+        btnVise.setAttribute('aria-expanded', 'false');
+    }
+
+    // Pokreni odmah i pri resize
+    applyVisibility();
+
+    let resizeTimer;
+    window.addEventListener('resize', function () {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(applyVisibility, 150); // Debounce
+    });
+
+    // Dugme "Vidi više" – prikaži sve slike
+    btnVise.addEventListener('click', function () {
+        items.forEach(function (el) {
+            el.classList.remove('galerija-item--hidden');
+            el.style.display = '';
+        });
         btnVise.classList.add('hidden');
         btnManje.classList.remove('hidden');
         btnVise.setAttribute('aria-expanded', 'true');
     });
 
-    btnManje.addEventListener('click', () => {
-        skrivene.forEach(el => el.style.display = 'none');
-        btnManje.classList.add('hidden');
-        btnVise.classList.remove('hidden');
-        btnVise.setAttribute('aria-expanded', 'false');
-
-        // Scroll nazad na vrh galerije
+    // Dugme "Vidi manje" – vrati na inicijalni broj
+    btnManje.addEventListener('click', function () {
+        applyVisibility();
         document.getElementById('galerija').scrollIntoView({ behavior: 'smooth' });
     });
 })();
 
-// --- Lightbox ---
+
+/* ---- Lightbox ---- */
 (function () {
-    const lightbox    = document.getElementById('lightbox');
-    const lbImg       = document.getElementById('lightboxImg');
-    const lbCounter   = document.getElementById('lightboxCounter');
-    const lbClose     = document.getElementById('lightboxClose');
-    const lbPrev      = document.getElementById('lightboxPrev');
-    const lbNext      = document.getElementById('lightboxNext');
-    const lbOverlay   = document.getElementById('lightboxOverlay');
+    const lightbox  = document.getElementById('lightbox');
+    const lbImg     = document.getElementById('lightboxImg');
+    const lbCounter = document.getElementById('lightboxCounter');
+    const lbClose   = document.getElementById('lightboxClose');
+    const lbPrev    = document.getElementById('lightboxPrev');
+    const lbNext    = document.getElementById('lightboxNext');
+    const lbOverlay = document.getElementById('lightboxOverlay');
 
     if (!lightbox) return;
 
-    const items = document.querySelectorAll('.galerija-item');
     let trenutni = 0;
 
+    /** Uvijek uzima SVE slike (i skrivene i vidljive) */
     function getSlike() {
-        // Uzima sve slike koje su trenutno vidljive i skrivene (sve)
         return Array.from(document.querySelectorAll('.galerija-item img'));
     }
 
-    function otvoriLightbox(index) {
+    function azurirajPrikaz() {
         const slike = getSlike();
-        trenutni = index;
         lbImg.src = slike[trenutni].src;
         lbImg.alt = slike[trenutni].alt;
-        lbCounter.textContent = `${trenutni + 1} / ${slike.length}`;
+        lbCounter.textContent = (trenutni + 1) + ' / ' + slike.length;
+    }
+
+    function otvoriLightbox(index) {
+        trenutni = index;
+        azurirajPrikaz();
         lightbox.classList.add('open');
         lightbox.setAttribute('aria-hidden', 'false');
-        document.body.style.overflow = 'hidden'; // Blokira scroll
+        document.body.style.overflow = 'hidden';
+        lbClose.focus();
     }
 
     function zatvoriLightbox() {
         lightbox.classList.remove('open');
         lightbox.setAttribute('aria-hidden', 'true');
-        document.body.style.overflow = ''; // Vraća scroll
+        document.body.style.overflow = '';
         lbImg.src = '';
     }
 
     function sljedeca() {
         const slike = getSlike();
         trenutni = (trenutni + 1) % slike.length;
-        lbImg.src = slike[trenutni].src;
-        lbImg.alt = slike[trenutni].alt;
-        lbCounter.textContent = `${trenutni + 1} / ${slike.length}`;
+        azurirajPrikaz();
     }
 
     function prethodna() {
         const slike = getSlike();
         trenutni = (trenutni - 1 + slike.length) % slike.length;
-        lbImg.src = slike[trenutni].src;
-        lbImg.alt = slike[trenutni].alt;
-        lbCounter.textContent = `${trenutni + 1} / ${slike.length}`;
+        azurirajPrikaz();
     }
 
-    // Klik na sliku
-    items.forEach((item, i) => {
-        item.addEventListener('click', () => otvoriLightbox(i));
+    // Klik na svaku sliku – koristimo event delegation na gridu
+    document.getElementById('galerijaGrid').addEventListener('click', function (e) {
+        const item = e.target.closest('.galerija-item');
+        if (!item) return;
+        const index = parseInt(item.getAttribute('data-index'), 10);
+        otvoriLightbox(index);
     });
 
     // Zatvaranje
     lbClose.addEventListener('click', zatvoriLightbox);
     lbOverlay.addEventListener('click', zatvoriLightbox);
 
-    // Navigacija
+    // Navigacija dugmadima
     lbNext.addEventListener('click', sljedeca);
     lbPrev.addEventListener('click', prethodna);
 
     // Tipkovnica
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', function (e) {
         if (!lightbox.classList.contains('open')) return;
-        if (e.key === 'Escape')     zatvoriLightbox();
-        if (e.key === 'ArrowRight') sljedeca();
-        if (e.key === 'ArrowLeft')  prethodna();
+        if (e.key === 'Escape')      zatvoriLightbox();
+        if (e.key === 'ArrowRight')  sljedeca();
+        if (e.key === 'ArrowLeft')   prethodna();
     });
 
     // Swipe podrška za mobilne uređaje
     let touchStartX = 0;
-    lightbox.addEventListener('touchstart', e => {
+
+    lightbox.addEventListener('touchstart', function (e) {
         touchStartX = e.changedTouches[0].screenX;
     }, { passive: true });
 
-    lightbox.addEventListener('touchend', e => {
+    lightbox.addEventListener('touchend', function (e) {
         const diff = touchStartX - e.changedTouches[0].screenX;
         if (Math.abs(diff) > 50) {
             diff > 0 ? sljedeca() : prethodna();

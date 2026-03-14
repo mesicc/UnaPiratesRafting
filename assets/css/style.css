@@ -1252,6 +1252,12 @@ ul { list-style: none; }
 /* ============================================================
    INSTAGRAM GALERIJA
 ============================================================ */
+/* ============================================================
+   GALERIJA – galerija.css
+   Una Pirates
+   ============================================================ */
+
+/* ---- BASE ---- */
 .galerija {
     background-color: #ffffff;
     padding: 80px 24px;
@@ -1262,40 +1268,43 @@ ul { list-style: none; }
     margin: 0 auto;
 }
 
-/* Header */
+/* ---- HEADER ---- */
 .galerija-header {
     text-align: center;
     margin-bottom: 48px;
 }
 
+.section-tag {
+    display: inline-block;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    color: var(--orange, #f97316);
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
 .galerija-title {
-    font-size: clamp(22px, 3vw, 36px);
+    font-size: clamp(20px, 3vw, 36px);
     font-weight: 800;
     color: #1a1a1a;
-    margin-bottom: 10px;
+    margin: 0 0 10px 0;
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 12px;
+    flex-wrap: wrap;
+    line-height: 1.3;
 }
 
 .galerija-ig-icon {
-    font-size: clamp(24px, 3vw, 36px);
+    font-size: clamp(22px, 3vw, 34px);
     color: #1a1a1a;
+    flex-shrink: 0;
 }
 
-.galerija-handle {
-    display: inline-block;
-    font-size: 14px;
-    font-weight: 800;
-    letter-spacing: 1.5px;
-    color: var(--orange);
-    transition: opacity 0.2s;
-}
-
-.galerija-handle:hover { opacity: 0.75; }
-
-/* Grid – 4 kolone, 2 reda (8 vidljivih) */
+/* ---- GRID ---- */
+/* Desktop: 4 kolone × 2 reda = 8 vidljivih */
 .galerija-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -1303,19 +1312,21 @@ ul { list-style: none; }
     margin-bottom: 32px;
 }
 
-/* Sakriveni redovi */
+/* Sakrivene stavke (kontroliše JS) */
 .galerija-item--hidden {
-    display: none;
+    display: none !important;
 }
 
-/* Jedna slika */
+/* ---- GRID ITEM ---- */
 .galerija-item {
     margin: 0;
+    padding: 0;
     border-radius: 14px;
     overflow: hidden;
     aspect-ratio: 1 / 1;
     cursor: pointer;
     position: relative;
+    background-color: #f0f0f0; /* Placeholder dok se slika učitava */
 }
 
 .galerija-item img {
@@ -1326,19 +1337,26 @@ ul { list-style: none; }
     transition: transform 0.4s ease;
 }
 
+/* Tamni overlay na hover */
 .galerija-item::after {
     content: '';
     position: absolute;
     inset: 0;
-    background: rgba(0,0,0,0);
+    background: rgba(0, 0, 0, 0);
     transition: background 0.3s;
     border-radius: 14px;
+    pointer-events: none;
 }
 
-.galerija-item:hover img { transform: scale(1.06); }
-.galerija-item:hover::after { background: rgba(0,0,0,0.15); }
+.galerija-item:hover img {
+    transform: scale(1.06);
+}
 
-/* Dugmad */
+.galerija-item:hover::after {
+    background: rgba(0, 0, 0, 0.15);
+}
+
+/* ---- DUGMAD ---- */
 .galerija-actions {
     display: flex;
     justify-content: center;
@@ -1364,6 +1382,120 @@ ul { list-style: none; }
 .btn-vidi-manje:hover {
     border-color: var(--orange);
     color: var(--orange);
+}
+
+
+.hidden {
+    display: none !important;
+}
+
+/* ---- LIGHTBOX ---- */
+.lightbox {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    align-items: center;
+    justify-content: center;
+}
+
+.lightbox.open {
+    display: flex;
+}
+
+.lightbox-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+}
+
+.lightbox-content {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    padding: 60px 80px;
+    box-sizing: border-box;
+}
+
+.lightbox-img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 8px;
+    box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Zatvaranje */
+.lightbox-close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 2;
+}
+
+.lightbox-close:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Navigacija */
+.lightbox-prev,
+.lightbox-next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.15);
+    border: none;
+    color: #fff;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.2s;
+    z-index: 2;
+}
+
+.lightbox-prev { left: 20px; }
+.lightbox-next { right: 20px; }
+
+.lightbox-prev:hover,
+.lightbox-next:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Brojač */
+.lightbox-counter {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    z-index: 2;
 }
 
 /* ---- Galerija social dugmad ---- */
