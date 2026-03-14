@@ -888,6 +888,18 @@
     flex-shrink: 0;
 }
 
+.kayak-slide:first-child {
+	object-position: center bottom;
+}
+
+.kayak-slide:first-child(5) {
+	object-position: center top;
+}
+
+.kayak-city:first-child {
+	object-position: center center;
+}
+
 /* Strelice */
 .kayak-arrow {
 	position: absolute;
